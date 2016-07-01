@@ -1,6 +1,8 @@
 /* jshint node: true */
 'use strict';
 
-module.exports = {
+var UITheme = require('untitled-ui/theme');
+
+module.exports = new UITheme({
   name: 'ui-base-theme'
-};
+});
