@@ -6,6 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', { path: '/' }, function () {
+    this.route('modal');
+  });
+  this.route('table');
+  this.route('panel', function() {
+    this.route('inbox');
+  });
 });
 
 export default Router;
