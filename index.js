@@ -3,6 +3,4 @@
 
 var UITheme = require('untitled-ui/theme');
 
-module.exports = new UITheme({
-  name: 'ui-base-theme'
-});
+module.exports = UITheme;

@@ -1,0 +1,5 @@
+@import './ui-panel--default-content';
+
+@component() {
+  @include ui-panel--default-content();
+}
