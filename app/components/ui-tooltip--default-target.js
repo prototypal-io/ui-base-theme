@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-tooltip--default-target';
+export { default } from 'ui-base-theme/components/ui-tooltip--default-target';

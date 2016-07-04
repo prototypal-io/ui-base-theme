@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/icons/icon-dropbutton';
+export { default } from 'ui-base-theme/components/icons/icon-dropbutton';

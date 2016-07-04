@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-input';
+export { default } from 'ui-base-theme/components/ui-input';

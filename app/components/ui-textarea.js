@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-textarea';
+export { default } from 'ui-base-theme/components/ui-textarea';

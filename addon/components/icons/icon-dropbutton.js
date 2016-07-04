@@ -1,5 +1,5 @@
 import UIKindComponent from '../ui-kind';
-import layout from 'untitled-ui/templates/components/icons/icon-dropbutton';
+import layout from 'ui-base-theme/templates/components/icons/icon-dropbutton';
 
 export default UIKindComponent.extend({
   layout

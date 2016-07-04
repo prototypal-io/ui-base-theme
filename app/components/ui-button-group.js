@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-button-group';
+export { default } from 'ui-base-theme/components/ui-button-group';

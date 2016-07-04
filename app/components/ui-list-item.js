@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-list-item';
+export { default } from 'ui-base-theme/components/ui-list-item';

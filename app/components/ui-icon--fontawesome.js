@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-icon--fontawesome';
+export { default } from 'ui-base-theme/components/ui-icon--fontawesome';

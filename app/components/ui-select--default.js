@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-select--default';
+export { default } from 'ui-base-theme/components/ui-select--default';

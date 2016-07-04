@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/icons/icon-close';
+export { default } from 'ui-base-theme/components/icons/icon-close';

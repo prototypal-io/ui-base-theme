@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-prevent-scroll-outside';
+export { default } from 'ui-base-theme/components/ui-prevent-scroll-outside';

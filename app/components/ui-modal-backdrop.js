@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-modal-backdrop';
+export { default } from 'ui-base-theme/components/ui-modal-backdrop';

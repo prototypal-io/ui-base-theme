@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-popup';
+export { default } from 'ui-base-theme/components/ui-popup';

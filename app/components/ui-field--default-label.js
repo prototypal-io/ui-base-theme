@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-field--default-label';
+export { default } from 'ui-base-theme/components/ui-field--default-label';

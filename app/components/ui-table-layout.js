@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-table-layout';
+export { default } from 'ui-base-theme/components/ui-table-layout';

@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-field';
+export { default } from 'ui-base-theme/components/ui-field';

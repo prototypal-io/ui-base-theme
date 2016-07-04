@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-ripple-animation';
+export { default } from 'ui-base-theme/components/ui-ripple-animation';

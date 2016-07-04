@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-panel--modal-titlebar-action';
+export { default } from 'ui-base-theme/components/ui-panel--modal-titlebar-action';

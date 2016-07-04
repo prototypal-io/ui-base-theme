@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/components/ui-dropbutton-trigger';
+export { default } from 'ui-base-theme/components/ui-dropbutton-trigger';

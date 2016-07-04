@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import UIComponent from 'untitled-ui/components/ui-component';
-import UIKind from 'untitled-ui/components/ui-kind';
+import UIComponent from 'ui-base-theme/components/ui-component';
+import UIKind from 'ui-base-theme/components/ui-kind';
 
 const UICarComponent = UIComponent.extend();
 const UICarDefaultComponent = UIKind.extend();

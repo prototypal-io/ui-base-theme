@@ -1,1 +1,1 @@
-export { default } from 'untitled-ui/services/ui-theme';
+export { default } from 'ui-base-theme/services/ui-theme';

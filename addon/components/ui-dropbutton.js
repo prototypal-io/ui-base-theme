@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import UIComponent from './ui-component';
-import layout from 'untitled-ui/templates/components/ui-dropbutton';
+import layout from 'ui-base-theme/templates/components/ui-dropbutton';
 
 export default UIComponent.extend({
   layout,

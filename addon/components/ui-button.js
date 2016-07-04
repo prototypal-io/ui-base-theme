@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import UIComponent from './ui-component';
-import layout from 'untitled-ui/templates/components/ui-button';
+import layout from 'ui-base-theme/templates/components/ui-button';
 
 export default UIComponent.extend({
   layout,
