@@ -2,12 +2,12 @@
 @import './ui-button--base';
 
 @component(
-    $radius: 0.3em,
-    $border-color: #b9b9b9,
-    $color: #6a6a6a,
-    $background: #ffffff,
-    $disabled-color: #ababab,
-    $disabled-background: #f9f9f9
+    $radius: $untitled-ui--button--default--radius,
+    $border-color: lighten($untitled-ui--default-color, 35%),
+    $color: $untitled-ui--default-color,
+    $background: $untitled-ui--button--default--background,
+    $disabled-color: $untitled-ui--button--default--disabled-color,
+    $disabled-background: $untitled-ui--button--default--disabled-background
   ) {
   @include ui-button();
   @include ui-button--base();

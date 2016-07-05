@@ -1,7 +1,10 @@
 @import './ui-button';
 @import './ui-button--base';
 
-@component($border-color: #ccc, $padding: 0 0.9em) {
+@component(
+  $border-color: #ccc,
+  $padding: 0 0.9em
+  ) {
   @include ui-button();
   @include ui-button--base();
 
