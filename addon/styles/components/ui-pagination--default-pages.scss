@@ -1,9 +1,11 @@
 @component(
-  $link-color: #1787e5,
-  $hover-background: #e6f3fd,
-  $hover-color: #1165ad,
-  $active-background: #e6f3fd,
-  $border-radius: 3px
+  $border-radius: $untitled-ui--pagination--default--radius,
+  $color: $untitled-ui--pagination--default--color,
+  $background: $untitled-ui--pagination--default--background,
+  $hover-color: $untitled-ui--pagination--default--hover-color,
+  $hover-background: $untitled-ui--pagination--default--hover-background,
+  $active-color: $untitled-ui--pagination--default--active-color,
+  $active-background: $untitled-ui--pagination--default--active-background
 ) {
   flex: 1;
   text-align: center;
@@ -15,19 +17,19 @@
     padding: 0 0.5em;
     margin: 0 1px;
     text-decoration: none;
-    color: $link-color;
+    color: $color;
     transition:
       background 0.2s,
       color 0.2s;
     border-radius: $border-radius;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 
     &:hover {
-      background: $hover-background;
       color: $hover-color;
+      background: $hover-background;
     }
 
     &.active {
+      color: $active-color;
       background: $active-background;
     }
   }

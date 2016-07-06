@@ -47,3 +47,11 @@ $untitled-ui--message--default--border-color: #d7d7d7;
 $untitled-ui--message--default--border-width: 1px;
 $untitled-ui--message--default--padding: 0.5em;
 $untitled-ui--message--default--box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+
+$untitled-ui--pagination--default--radius: $untitled-ui--border-radius;
+$untitled-ui--pagination--default--color: $untitled-ui--primary-color;
+$untitled-ui--pagination--default--background: transparent;
+$untitled-ui--pagination--default--hover-color: darken($untitled-ui--primary-color, 10%);
+$untitled-ui--pagination--default--hover-background: lighten($untitled-ui--primary-color, 46%);
+$untitled-ui--pagination--default--active-color: #ffffff;
+$untitled-ui--pagination--default--active-background: $untitled-ui--primary-color;
