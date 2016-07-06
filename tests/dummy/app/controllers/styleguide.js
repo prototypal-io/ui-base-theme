@@ -9,8 +9,8 @@ let states = ['active', 'focus', 'disabled', 'loading'];
 let allComponents = uiComponentNames.map(cn => {
   return {
     name: cn,
-    kinds,
-    states
+    kinds: kinds.slice(),
+    states: states.slice()
   }
 });
 
