@@ -8,11 +8,12 @@
       placeholder=placeholder
       disabled=states.disabled
       aria-labelledby=ids.label
-      class=(concat "ui-input--default--input"
-                    " "
-                    (if states.disabled "ui-input--default--input--disabled")
-                    " "
-                    (if states.error "ui-input--default--input--error"))
+      class=(concat "ui-input--default--input "
+                    (ui-state states
+                      'disabled:ui-input--default--input--disabled'
+                      'error:ui-input--default--input--error'
+                    )
+             )
       focus-out=focus-out}}
   </div>
 </div>

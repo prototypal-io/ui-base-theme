@@ -14,7 +14,9 @@
         {{ui-icon
           icon="dropbutton"
           class=(concat "ui-dropbutton-trigger--icon "
-                        (if states.disabled "ui-dropbutton-trigger--icon--disabled"))}}
+            (ui-state states 'disabled:ui-dropbutton-trigger--icon--disabled')
+          )
+        }}
     {{/group.button}}
   {{/ui-button-group}}
 
@@ -22,7 +24,7 @@
   {{#ui-button
     disabled=states.disabled
     loading=states.loading
-    size=size 
+    size=size
     id=targetId
     onclick=popup.toggle
     active=states.active}}
@@ -30,6 +32,8 @@
       {{ui-icon
         icon="dropbutton"
         class=(concat "ui-dropbutton-trigger--icon "
-                      (if states.disabled "ui-dropbutton-trigger--icon--disabled"))}}
+                (ui-state states 'disabled:ui-dropbutton-trigger--icon--disabled')
+              )
+      }}
   {{/ui-button}}
 {{/if}}
