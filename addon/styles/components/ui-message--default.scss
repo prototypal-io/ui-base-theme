@@ -1,19 +1,22 @@
 @component(
-  $background: #f9f9f9,
-  $border-color: #d7d7d7,
-  $color: #5e5e5e,
-  $radius: 0.3em
+  $radius: $untitled-ui--message--default--radius,
+  $color: $untitled-ui--message--default--color,
+  $background: $untitled-ui--message--default--background,
+  $border-color: $untitled-ui--message--default--border-color,
+  $border-width: $untitled-ui--message--default--border-width,
+  $padding: $untitled-ui--message--default--padding,
+  $box-shadow: $untitled-ui--message--default--box-shadow
 ) {
-  padding: 1px;
+  padding: $untitled-ui--message--default--border-width;
   border-radius: $radius;
   background: linear-gradient(to bottom, lighten($border-color, 7.5%) 0%, $border-color 100%);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: $untitled-ui--message--default--box-shadow;
   margin-bottom: 1em;
 
   &--wrapper {
     background: $background;
     border-radius: inherit;
-    padding: 0.5em;
+    padding: $padding;
     color: $color;
     position: relative;
   }
@@ -25,8 +28,8 @@
 
   &--close {
     position: absolute;
-    top: 0.5em;
-    right: 0.5em;
+    top: $padding;
+    right: $padding;
     width: 1em;
     height: 1em;
     cursor: pointer;
@@ -42,9 +45,9 @@
       left: 0px;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.06);
       box-shadow:
-        inset 1px 1px 0px rgba(0, 0, 0, 0.1),
+        inset 1px 1px 0px rgba(0, 0, 0, 0.08),
         1px 1px 0px rgba(255, 255, 255, 0.4);
       transform: scale(0.1);
       opacity: 0;
