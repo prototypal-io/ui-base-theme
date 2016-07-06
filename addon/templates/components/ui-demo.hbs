@@ -1,0 +1,39 @@
+<div class="ui-demo">
+  {{#ui-panel as |p|}}
+    {{#p.titlebar}}{{demoComponent.name}}{{/p.titlebar}}
+
+    {{#p.content}}
+      <div class="ui-demo--modifiers">
+        <div class="ui-demo--kinds">
+          <h4>Kind</h4>
+          {{#ui-button-group as |group|}}
+            {{#each demoComponent.kinds as |kind|}}
+              {{#group.button active=(eq currentKind kind) onclick=(action "setKind" kind)}}
+                {{kind}}
+              {{/group.button}}
+            {{/each}}
+          {{/ui-button-group}}
+        </div>
+
+        <div class="ui-demo--states">
+          <h4>States</h4>
+          {{#ui-button-group as |group|}}
+            {{#each demoComponent.states as |state|}}
+              {{#group.button active=(get activeStates state) onclick=(action "setState" state)}}
+                {{state}}
+              {{/group.button}}
+            {{/each}}
+          {{/ui-button-group}}
+        </div>
+      </div>
+
+      {{#each sizes as |size|}}
+        {{component (concat "demo--" demoComponent.name)
+          kind=currentKind
+          states=activeStates
+          size=size
+        }}
+      {{/each}}
+    {{/p.content}}
+  {{/ui-panel}}
+</div>
