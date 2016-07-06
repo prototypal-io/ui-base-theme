@@ -30,3 +30,12 @@ $untitled-ui--checkbox--default--disabled-border-color: lighten($untitled-ui--de
 $untitled-ui--checkbox--default--disabled-background: lighten($untitled-ui--default-color, 55%);
 $untitled-ui--checkbox--default--checked-border-color: $untitled-ui--primary-color;
 $untitled-ui--checkbox--default--checked-background: lighten($untitled-ui--primary-color, 10%);
+
+$untitled-ui--list--default-item--color: $untitled-ui--default-color;
+$untitled-ui--list--default-item--background: transparent;
+$untitled-ui--list--default-item--border-color: #e2e2e2;
+$untitled-ui--list--default-item--border-style: solid;
+$untitled-ui--list--default-item--border-width: 1px;
+$untitled-ui--list--default-item--padding: 0 0.5em;
+$untitled-ui--list--default-item--hover-color: #ffffff;
+$untitled-ui--list--default-item--hover-background: #1787e5;
