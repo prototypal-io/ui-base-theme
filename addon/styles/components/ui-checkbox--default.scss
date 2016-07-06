@@ -1,4 +1,13 @@
-@component() {
+@component(
+  $radius: $untitled-ui--checkbox--default--radius,
+  $color: $untitled-ui--checkbox--default--color,
+  $border-color: $untitled-ui--checkbox--default--border-color,
+  $background: $untitled-ui--checkbox--default--background,
+  $checked-border-color: $untitled-ui--checkbox--default--checked-border-color,
+  $checked-background: $untitled-ui--checkbox--default--checked-background,
+  $disabled-border-color: $untitled-ui--checkbox--default--disabled-border-color,
+  $disabled-background: $untitled-ui--checkbox--default--disabled-background
+) {
   display: inline-block;
   cursor: pointer;
 
@@ -13,14 +22,14 @@
     display: inline-block;
     vertical-align: top;
     box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-    background: linear-gradient(to bottom,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.30) 100%);
+    background: linear-gradient(to bottom, lighten($border-color, 15%) 0%, $border-color 100%);
 
     &--wrapper {
       border-radius: inherit;
       position: relative;
       height: 0.9em;
       width: 0.9em;
-      background: #ffffff;
+      background: $background;
     }
 
     &--icon {
@@ -75,8 +84,12 @@
   &--disabled {
     cursor: inherit;
 
+    .ui-checkbox--default--component {
+      background: linear-gradient(to bottom, lighten($disabled-border-color, 25%) 0%, lighten($disabled-border-color, 10%) 100%);
+    }
+
     .ui-checkbox--default--component--wrapper {
-      background: #f3f3f3;
+      background: $disabled-background;
     }
 
     /* Disabled Checked */
@@ -89,11 +102,11 @@
 
   &--checked {
     .ui-checkbox--default--component {
-      background: linear-gradient(to bottom, #40a0f0 0%, #1274c6 100%);
+      background: linear-gradient(to bottom, lighten($checked-border-color, 15%) 0%, $checked-border-color 100%);
     }
 
     .ui-checkbox--default--component--wrapper {
-      background: #40a0f0;
+      background: $checked-background;
     }
 
     .ui-checkbox--default--component--icon {

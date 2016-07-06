@@ -8,7 +8,25 @@ $untitled-ui--font-size--medium: 1rem;
 $untitled-ui--font-size--large: 1.3rem;
 $untitled-ui--font-size--x-large: 1.6rem;
 
-$untitled-ui--button--default--radius: 0.3em;
+$untitled-ui--button--default--radius: $untitled-ui--border-radius;
+$untitled-ui--button--default--color: $untitled-ui--default-color;
+$untitled-ui--button--default--border-color: lighten($untitled-ui--default-color, 35%);
 $untitled-ui--button--default--background: #ffffff;
-$untitled-ui--button--default--disabled-color: #ababab;
-$untitled-ui--button--default--disabled-background: #f9f9f9;
+$untitled-ui--button--default--disabled-border-color: lighten($untitled-ui--default-color, 25%);
+$untitled-ui--button--default--disabled-background: lighten($untitled-ui--default-color, 55%);
+
+$untitled-ui--button--primary--radius: $untitled-ui--border-radius;
+$untitled-ui--button--primary--color: $untitled-ui--primary-color;
+$untitled-ui--button--primary--border-color: lighten($untitled-ui--primary-color, 10%);
+$untitled-ui--button--primary--background: #ffffff;
+$untitled-ui--button--primary--disabled-border-color: lighten($untitled-ui--primary-color, 25%);
+$untitled-ui--button--primary--disabled-background: lighten($untitled-ui--primary-color, 49%);
+
+$untitled-ui--checkbox--default--radius: $untitled-ui--border-radius;
+$untitled-ui--checkbox--default--color: $untitled-ui--default-color;
+$untitled-ui--checkbox--default--border-color: lighten($untitled-ui--default-color, 35%);
+$untitled-ui--checkbox--default--background: #ffffff;
+$untitled-ui--checkbox--default--disabled-border-color: lighten($untitled-ui--default-color, 25%);
+$untitled-ui--checkbox--default--disabled-background: lighten($untitled-ui--default-color, 55%);
+$untitled-ui--checkbox--default--checked-border-color: $untitled-ui--primary-color;
+$untitled-ui--checkbox--default--checked-background: lighten($untitled-ui--primary-color, 10%);

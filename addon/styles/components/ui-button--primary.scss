@@ -6,9 +6,11 @@
   @include ui-button();
   @include ui-button--base();
   @include ui-button--default(
-    $border-color: $untitled-ui--primary-color,
-    $color: $untitled-ui--primary-color,
-    $disabled-background: lighten($untitled-ui--primary-color, 49%),
-    $disabled-color: lighten($untitled-ui--primary-color, 25%)
+    $radius: $untitled-ui--button--primary--radius,
+    $color: $untitled-ui--button--primary--color,
+    $border-color: $untitled-ui--button--primary--border-color,
+    $background: $untitled-ui--button--primary--background,
+    $disabled-background: $untitled-ui--button--primary--disabled-background,
+    $disabled-border-color: $untitled-ui--button--primary--disabled-border-color
   );
 };
