@@ -55,3 +55,15 @@ $untitled-ui--pagination--default--hover-color: darken($untitled-ui--primary-col
 $untitled-ui--pagination--default--hover-background: lighten($untitled-ui--primary-color, 46%);
 $untitled-ui--pagination--default--active-color: #ffffff;
 $untitled-ui--pagination--default--active-background: $untitled-ui--primary-color;
+
+$untitled-ui--panel--default--radius: $untitled-ui--border-radius;
+$untitled-ui--panel--default--border-color: #c8d7dc;
+$untitled-ui--panel--default--border-size: 1px;
+$untitled-ui--panel--default--background: #ffffff;
+$untitled-ui--panel--default--box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+
+$untitled-ui--panel--modal--radius: $untitled-ui--border-radius;
+$untitled-ui--panel--modal--border-color: #c8d7dc;
+$untitled-ui--panel--modal--border-size: 0px;
+$untitled-ui--panel--modal--background: #ffffff;
+$untitled-ui--panel--modal--box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);

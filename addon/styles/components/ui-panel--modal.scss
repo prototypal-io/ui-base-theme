@@ -1,9 +1,19 @@
+@import './ui-panel--default';
+
 @component() {
-  max-height: inherit;
+  @include ui-panel--default(
+    $border-radius: $untitled-ui--panel--modal--radius,
+    $border-color: $untitled-ui--panel--modal--border-color,
+    $border-size: $untitled-ui--panel--modal--border-size,
+    $background: $untitled-ui--panel--modal--background,
+    $box-shadow: $untitled-ui--panel--modal--box-shadow
+  );
+
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
-  border-radius: $untitled-ui--border-radius;
-  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  &--wrapper {
+    max-height: inherit;
+  }
 }

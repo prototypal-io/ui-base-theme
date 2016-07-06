@@ -1,15 +1,20 @@
-@component() {
+@component(
+  $border-radius: $untitled-ui--panel--default--radius,
+  $border-color: $untitled-ui--panel--default--border-color,
+  $border-size: $untitled-ui--panel--default--border-size,
+  $background: $untitled-ui--panel--default--background,
+  $box-shadow: $untitled-ui--panel--default--box-shadow
+) {
   display: flex;
-  border-radius: $untitled-ui--border-radius;
-  padding: 1px;
-  background: #c6c6c6;
-  background-image: linear-gradient(to bottom,  #e0eaed 0%, #c8d7dc 100%);
-  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  border-radius: $border-radius;
+  padding: $border-size;
+  background: linear-gradient(to bottom, lighten($border-color, 10%) 0%, $border-color 100%);
+  box-shadow: $box-shadow;
   margin-bottom: 5px;
 
   &--wrapper {
     flex: 1;
     border-radius: inherit;
-    background: #ffffff;
+    background: $background;
   }
 }
