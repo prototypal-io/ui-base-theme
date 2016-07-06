@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('panel', function() {
     this.route('inbox');
   });
+  this.route('styleguide');
 });
 
 export default Router;

@@ -1,0 +1,19 @@
+{{#ui-dropbutton size=size as |dropbutton|}}
+  {{#dropbutton.trigger}}
+    Actions (with icons)
+  {{/dropbutton.trigger}}
+
+  {{#dropbutton.popup as |popup|}}
+    {{#popup.list as |list|}}
+      {{#list.item onclick=(action "save")}}
+        {{ui-icon kind="fontawesome" icon="save"}} Save
+      {{/list.item}}
+      {{#list.item onclick=(action "save")}}
+        {{ui-icon kind="fontawesome" icon="pencil"}} Edit
+      {{/list.item}}
+      {{#list.item onclick=(action "save")}}
+        {{ui-icon kind="fontawesome" icon="trash"}} Delete
+      {{/list.item}}
+    {{/popup.list}}
+  {{/dropbutton.popup}}
+{{/ui-dropbutton}}

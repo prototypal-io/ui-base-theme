@@ -1,0 +1,14 @@
+@component {
+  &--modifiers {
+    display: flex;
+    margin-bottom: 1em;
+  }
+
+  &--kinds {
+    flex: 1;
+  }
+
+  &--states {
+    flex: 1;
+  }
+}
