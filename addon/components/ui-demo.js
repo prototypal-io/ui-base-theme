@@ -23,6 +23,19 @@ export default Ember.Component.extend({
     'x-large'
   ],
 
+  demoComponentToRender: Ember.computed('demoComponent.name', function() {
+    let componentName = this.get('demoComponent.name');
+    let demoComponentName = `demo--${componentName}`;
+    let demoComponent = Ember.getOwner(this)._lookupFactory(`component:${demoComponentName}`);
+    if (demoComponent) {
+      console.log(`rendering ${componentName} demo with ${demoComponentName}`);
+      return demoComponentName;
+    } else {
+      console.log(`rendering ${componentName} demo with demo--generic`);
+      return 'demo--generic';
+    }
+  }),
+
   actions: {
     setKind(size) {
       this.set('currentKind', size);

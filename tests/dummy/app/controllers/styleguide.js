@@ -1,46 +1,21 @@
 import Ember from 'ember';
 
+let uiComponentModules = Object.keys(require.entries).filter((module) => /^ui-base-theme\/components\/ui-/.test(module));
+let uiComponentNames = uiComponentModules.map(m => m.replace(/^ui-base-theme\/components\//, '')).filter(m => !/--/.test(m));
+Ember.A(uiComponentNames).removeObjects(['ui-component', 'ui-demo', 'ui-icon', 'ui-kind', 'ui-modal-backdrop', 'ui-modal', 'ui-panel-content', 'ui-panel-titlebar', 'ui-popup', 'ui-table-cell', 'ui-table-row', 'ui-table-layout', 'ui-table', 'ui-tooltip', 'ui-ripple', 'ui-ripple-animation', 'ui-prevent-scroll-outside']);
+
+let kinds = ['default'];
+let states = ['active', 'focus', 'disabled', 'loading'];
+let allComponents = uiComponentNames.map(cn => {
+  return {
+    name: cn,
+    kinds,
+    states
+  }
+});
+
+Ember.A(allComponents).findBy('name', 'ui-button').kinds = ['default', 'material', 'primary', 'simple'];
+
 export default Ember.Controller.extend({
-  allComponents: [
-    {
-      name: 'ui-button',
-      kinds: [
-        'default',
-        'material',
-        'primary',
-        'simple'
-      ],
-      states: [
-        'active',
-        'focus',
-        'disabled',
-        'loading'
-      ]
-    },
-    {
-      name: 'ui-button-group',
-      kinds: ['default'],
-      states: []
-    },
-    {
-      name: 'ui-dropbutton',
-      kinds: ['default'],
-      states: []
-    },
-    {
-      name: 'ui-checkbox',
-      kinds: ['default'],
-      states: []
-    },
-    {
-      name: 'ui-tabs',
-      kinds: ['default'],
-      states: []
-    },
-    {
-      name: 'ui-pagination',
-      kinds: ['default'],
-      states: []
-    }
-  ]
+  allComponents
 });

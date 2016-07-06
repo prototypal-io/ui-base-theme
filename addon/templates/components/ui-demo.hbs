@@ -28,7 +28,8 @@
       </div>
 
       {{#each sizes as |size|}}
-        {{component (concat "demo--" demoComponent.name)
+        {{component demoComponentToRender
+          componentBeingDemoed=demoComponent.name
           kind=currentKind
           states=activeStates
           size=size
