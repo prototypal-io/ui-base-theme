@@ -1,0 +1,11 @@
+<h1>Styleguide</h1>
+
+{{#each allComponents as |demoComponent|}}
+  {{#ui-panel as |p|}}
+    {{#p.titlebar}}{{demoComponent}}{{/p.titlebar}}
+
+    {{#p.content}}
+      {{component (concat "demo--" demoComponent)}}
+    {{/p.content}}
+  {{/ui-panel}}
+{{/each}}
