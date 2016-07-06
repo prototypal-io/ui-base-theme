@@ -1,17 +1,19 @@
 @component(
-  $border-radius: 0.3rem,
-  $color: inherit,
-  $disabled-background: #f9f9f9,
-  $disabled-color: #777777,
-  $error-color: #ff0000,
-  $focus-color: #0090ff
+  $border-radius: $untitled-ui--input--default--radius,
+  $color: $untitled-ui--input--default--color,
+  $border-color: $untitled-ui--input--default--border-color,
+  $background: $untitled-ui--input--default--background,
+  $disabled-color: $untitled-ui--input--default--disabled-color,
+  $disabled-background: $untitled-ui--input--default--disabled-background,
+  $error-color: $untitled-ui--input--default--error-color,
+  $focus-color: $untitled-ui--input--default--focus-color
 ) {
   border-radius: $border-radius;
   padding: 1px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.12) 100%);
+  background: linear-gradient(to bottom, $border-color 0%, lighten($border-color, 15%) 100%);
 
   &--wrapper {
-    background: white;
+    background: $background;
     border-radius: inherit;
   }
 
@@ -24,6 +26,7 @@
     width: 100%;
     padding: 0.5em 0.4em; /* TODO: Make sizes match buttons */
     color: $color;
+    background: transparent;
 
     &:focus {
       outline: none;

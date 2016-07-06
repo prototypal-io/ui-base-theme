@@ -5,7 +5,10 @@
   $hover-color: $untitled-ui--pagination--default--hover-color,
   $hover-background: $untitled-ui--pagination--default--hover-background,
   $active-color: $untitled-ui--pagination--default--active-color,
-  $active-background: $untitled-ui--pagination--default--active-background
+  $active-background: $untitled-ui--pagination--default--active-background,
+  $padding: $untitled-ui--pagination--default--padding,
+  $margin: $untitled-ui--pagination--default--margin,
+  $width: $untitled-ui--pagination--default--width
 ) {
   flex: 1;
   text-align: center;
@@ -14,8 +17,9 @@
 
   &--page {
     display: block;
-    padding: 0 0.5em;
-    margin: 0 1px;
+    padding: $padding;
+    margin: $margin;
+    width: $width;
     text-decoration: none;
     color: $color;
     transition:

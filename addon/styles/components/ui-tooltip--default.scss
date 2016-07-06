@@ -1,13 +1,18 @@
 @import './ui-tooltip--base';
 
-@component() {
+@component(
+  $color: $untitled-ui--tooltip--default--color,
+  $border-style: $untitled-ui--tooltip--default--border-style,
+  $border-width: $untitled-ui--tooltip--default--border-width
+) {
   @include ui-tooltip--base();
 
   &-target {
     display: inline-block;
     cursor: help;
-    color: #1787e5;
-    border-bottom: dotted 1px;
+    color: $color;
+    border-bottom-style: $border-style;
+    border-bottom-width: $border-width;
     cursor: pointer;
   }
 }

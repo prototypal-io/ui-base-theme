@@ -1,21 +1,27 @@
 @component(
-  $link-color: #1787e5,
-  $hover-background: #e6f3fd,
-  $hover-color: #1165ad,
-  $active-background: #1787e5,
-  $active-color: #ffffff,
-  $border-radius: 3px,
-  $align: flex-start
+  $border-radius: $untitled-ui--tabs--default--radius,
+  $color: $untitled-ui--tabs--default--color,
+  $background: $untitled-ui--tabs--default--background,
+  $hover-color: $untitled-ui--tabs--default--hover-color,
+  $hover-background: $untitled-ui--tabs--default--hover-background,
+  $active-color: $untitled-ui--tabs--default--active-color,
+  $active-background: $untitled-ui--tabs--default--active-background,
+  $padding: $untitled-ui--tabs--default--padding,
+  $margin: $untitled-ui--tabs--default--margin,
+  $width: $untitled-ui--tabs--default--width,
+  $align: $untitled-ui--tabs--default--align
 ) {
   display: flex;
   justify-content: $align;
 
   &--tab--link {
     text-decoration: none;
-    color: $link-color;
+    color: $color;
+    width: $width;
+    text-align: center;
     display: block;
-    padding: 0 0.75em;
-    margin: 0 1px;
+    padding: $padding;
+    margin: $margin;
     line-height: 2em;
     border-radius: $border-radius;
 
