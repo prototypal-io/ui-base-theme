@@ -1,3 +1,4 @@
+/* globals require */
 import Ember from 'ember';
 
 let uiComponentModules = Object.keys(require.entries).filter((module) => /^ui-base-theme\/components\/ui-/.test(module));
@@ -11,7 +12,7 @@ let allComponents = uiComponentNames.map(cn => {
     name: cn,
     kinds: kinds.slice(),
     states: states.slice()
-  }
+  };
 });
 
 Ember.A(allComponents).findBy('name', 'ui-button').kinds = ['default', 'material', 'primary', 'simple'];

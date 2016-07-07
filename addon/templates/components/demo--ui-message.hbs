@@ -1,17 +1,9 @@
-{{#ui-tabs size=size as |tabs|}}
-  {{#tabs.link-to "index"}}
-    Index
-  {{/tabs.link-to}}
-
-  {{#tabs.link-to "index.modal"}}
-    Modal
-  {{/tabs.link-to}}
-
-  {{#tabs.link-to "index.modal"}}
-    Tab 3
-  {{/tabs.link-to}}
-
-  {{#tabs.link-to "index.modal"}}
-    Tab 4
-  {{/tabs.link-to}}
-{{/ui-tabs}}
+{{#ui-message
+  kind=kind
+  states=states
+  size=size
+  onclick=(action action.alert "Close!")
+}}
+  Closeable message.<br />
+  Second line
+{{/ui-message}}

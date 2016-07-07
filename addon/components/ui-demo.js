@@ -37,6 +37,10 @@ export default Ember.Component.extend({
   }),
 
   actions: {
+    alert(message) {
+      alert(message);
+    },
+
     setKind(size) {
       this.set('currentKind', size);
     },
