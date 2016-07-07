@@ -9,18 +9,8 @@
          {{if group.isFirstChild 'first-child'}}
          {{if group.isLastChild 'last-child'}}"
   id="{{id}}">
-  <div class="wrapper
-    {{ui-state states
-      'active:wrapper--active'
-      'disabled:wrapper--disabled'
-    }}
-  ">
-    <div class="label
-      {{ui-state states
-        'active:label--active'
-        'loading:label--loading'
-      }}
-    ">
+  <div class="wrapper {{ui-state states 'active' 'disabled' el='wrapper'}}">
+    <div class="label {{ui-state states 'active' 'loading' el='label'}}">
       {{yield}}
     </div>
   </div>

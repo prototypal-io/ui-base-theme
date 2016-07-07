@@ -6,10 +6,7 @@
       disabled=states.disabled
       aria-labelledby=ids.label
       class=(concat "ui-textarea--default--input "
-                    (ui-state states
-                      'disabled:ui-textarea--default--input--disabled'
-                      'error:ui-textarea--default--input--error'
-                    )
+             (ui-state states 'disabled' 'error' el='ui-textarea--default--input')
             )
       rows=rows
       focus-out=focus-out}}

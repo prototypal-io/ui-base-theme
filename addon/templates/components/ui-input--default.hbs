@@ -9,11 +9,7 @@
       disabled=states.disabled
       aria-labelledby=ids.label
       class=(concat "ui-input--default--input "
-                    (ui-state states
-                      'disabled:ui-input--default--input--disabled'
-                      'error:ui-input--default--input--error'
-                    )
-             )
+        (ui-state states 'disabled' 'error' el='ui-input--default--input'))
       focus-out=focus-out}}
   </div>
 </div>
