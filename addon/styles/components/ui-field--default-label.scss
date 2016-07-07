@@ -1,8 +1,11 @@
 @component(
-  $color: inherit
+  $color: $untitled-ui--field--default-label--color,
+  $font: $untitled-ui--field--default-label--font,
+  $margin: $untitled-ui--field--default-label--margin
 ) {
   display: block;
   font-weight: 500;
-  margin: 0.3em 0;
+  margin: $margin;
   color: $color;
+  font-family: $font;
 }

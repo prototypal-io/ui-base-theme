@@ -46,6 +46,15 @@ $untitled-ui--checkbox--default--error-color: $untitled-ui--error-color;
 $untitled-ui--checkbox--default--focus-color: $untitled-ui--focus-color;
 $untitled-ui--checkbox--default--font: $untitled-ui--copy-font;
 
+$untitled-ui--field--default-label--color: $untitled-ui--font-color;
+$untitled-ui--field--default-label--font: $untitled-ui--copy-font;
+$untitled-ui--field--default-label--margin: 0.3em 0;
+$untitled-ui--field--default-description--color: $untitled-ui--font-color;
+$untitled-ui--field--default-description--font: $untitled-ui--copy-font;
+$untitled-ui--field--default-description--font-size: 0.9em;
+$untitled-ui--field--default-description--margin: 0.3em 0 0.6em 0;
+$untitled-ui--field--default-description--opacity: 0.6;
+
 $untitled-ui--list--default-item--color: $untitled-ui--default-color;
 $untitled-ui--list--default-item--background: $untitled-ui--content-background;
 $untitled-ui--list--default-item--border-color: #e2e2e2;
