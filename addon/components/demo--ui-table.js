@@ -3,6 +3,7 @@ import layout from 'ui-base-theme/templates/components/demo--ui-table';
 
 export default Ember.Component.extend({
   layout,
+  tagName: '',
 
   sortBy: 'name',
 
