@@ -1,0 +1,10 @@
+{{!- BEGIN-SNIPPET demo--ui-tooltip -}}
+{{#ui-tooltip as |tooltip|}}
+  {{#tooltip.target}}
+    Below
+  {{/tooltip.target}}
+  {{#tooltip.popup attachment='top center' targetAttachment='bottom center'}}
+    Hello World
+  {{/tooltip.popup}}
+{{/ui-tooltip}}
+{{!- END-SNIPPET -}}

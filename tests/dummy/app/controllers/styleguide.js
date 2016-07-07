@@ -1,4 +1,4 @@
-/* globals require */
+/* globals requirejs */
 import Ember from 'ember';
 
 let uiComponentModules = Object.keys(requirejs.entries)
@@ -22,11 +22,9 @@ Ember.A(uiComponentNames).removeObjects([
   'ui-prevent-scroll-outside',
   'ui-ripple',
   'ui-ripple-animation',
-  'ui-table',
   'ui-table-cell',
   'ui-table-layout',
-  'ui-table-row',
-  'ui-tooltip'
+  'ui-table-row'
 ]);
 
 let kinds = ['default'];
