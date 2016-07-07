@@ -7,13 +7,15 @@
   $color: $untitled-ui--popup--dropbutton--color,
   $background: $untitled-ui--popup--dropbutton--background,
   $padding: $untitled-ui--popup--dropbutton--padding,
-  $box-shadow: $untitled-ui--popup--dropbutton--box-shadow
+  $box-shadow: $untitled-ui--popup--dropbutton--box-shadow,
+  $font: $untitled-ui--popup--dropbutton--font
 ) {
   &--window {
     border-radius: $radius;
     background: linear-gradient(to bottom, lighten($border-color, 10%) 0%, $border-color 100%);
     padding: $border-width;
     box-shadow: $box-shadow;
+    font-family: $font;
 
     &--wrapper {
       background: $background;

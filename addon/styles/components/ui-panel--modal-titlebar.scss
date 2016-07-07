@@ -1,4 +1,6 @@
-@component() {
+@component(
+  $font: $untitled-ui--panel--modal-titlebar--font
+) {
   position: relative;
   border-top-right-radius: $untitled-ui--border-radius;
   border-top-left-radius: $untitled-ui--border-radius;
@@ -15,4 +17,5 @@
   text-shadow: 1px 1px #fff;
   background: #f3f7fa;
   border-bottom: solid 1px #dfe8ee;
+  font-family: $font;
 }

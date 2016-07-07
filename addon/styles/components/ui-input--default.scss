@@ -6,11 +6,13 @@
   $disabled-color: $untitled-ui--input--default--disabled-color,
   $disabled-background: $untitled-ui--input--default--disabled-background,
   $error-color: $untitled-ui--input--default--error-color,
-  $focus-color: $untitled-ui--input--default--focus-color
+  $focus-color: $untitled-ui--input--default--focus-color,
+  $font: $untitled-ui--input--default--font
 ) {
   border-radius: $border-radius;
   padding: 1px;
   background: linear-gradient(to bottom, $border-color 0%, lighten($border-color, 15%) 100%);
+  font-family: $font;
 
   &--wrapper {
     background: $background;

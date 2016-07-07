@@ -1,3 +1,6 @@
-@component() {
+@component(
+  $font: $untitled-ui--panel--default-content--font
+) {
   padding: 1em;
+  font-family: $font;
 }

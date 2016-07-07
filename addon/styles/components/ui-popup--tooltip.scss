@@ -7,7 +7,8 @@
   $color: $untitled-ui--popup--tooltip--color,
   $background: $untitled-ui--popup--tooltip--background,
   $padding: $untitled-ui--popup--tooltip--padding,
-  $box-shadow: $untitled-ui--popup--tooltip--box-shadow
+  $box-shadow: $untitled-ui--popup--tooltip--box-shadow,
+  $font: $untitled-ui--popup--tooltip--font
 ) {
   &--window {
     border-radius: $radius;
@@ -17,6 +18,7 @@
     max-width: 20em;
     max-height: 20em;
     opacity: 0.93;
+    font-family: $font;
 
     &--wrapper {
       padding: $padding;

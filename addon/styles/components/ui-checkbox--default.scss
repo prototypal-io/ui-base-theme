@@ -7,11 +7,13 @@
   $checked-background: $untitled-ui--checkbox--default--checked-background,
   $disabled-border-color: $untitled-ui--checkbox--default--disabled-border-color,
   $disabled-background: $untitled-ui--checkbox--default--disabled-background,
-  $error-color: $untitled-ui--input--default--error-color,
-  $focus-color: $untitled-ui--input--default--focus-color
+  $error-color: $untitled-ui--checkbox--default--error-color,
+  $focus-color: $untitled-ui--checkbox--default--focus-color,
+  $font: $untitled-ui--checkbox--default--font
 ) {
   display: inline-block;
   cursor: pointer;
+  font-family: $font;
 
   &--input {
     opacity: 0.001;

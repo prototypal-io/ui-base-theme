@@ -6,7 +6,8 @@
   $border-width: $untitled-ui--list--default-item--border-width,
   $padding: $untitled-ui--list--default-item--padding,
   $hover-color: $untitled-ui--list--default-item--hover-color,
-  $hover-background: $untitled-ui--list--default-item--hover-background
+  $hover-background: $untitled-ui--list--default-item--hover-background,
+  $font: $untitled-ui--list--default-item--font
 ) {
   position: relative;
   display: block;
@@ -16,6 +17,7 @@
   padding: $padding;
   line-height: 1.6em;
   background: $background;
+  font-family: $font;
 
   &:last-child {
     margin-bottom: 0px;

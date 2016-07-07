@@ -8,12 +8,14 @@
   $active-background: $untitled-ui--pagination--default--active-background,
   $padding: $untitled-ui--pagination--default--padding,
   $margin: $untitled-ui--pagination--default--margin,
-  $width: $untitled-ui--pagination--default--width
+  $width: $untitled-ui--pagination--default--width,
+  $font: $untitled-ui--pagination--default--font
 ) {
   flex: 1;
   text-align: center;
   display: flex;
   justify-content: center;
+  font-family: $font;
 
   &--page {
     display: block;

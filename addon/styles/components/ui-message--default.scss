@@ -5,13 +5,15 @@
   $border-color: $untitled-ui--message--default--border-color,
   $border-width: $untitled-ui--message--default--border-width,
   $padding: $untitled-ui--message--default--padding,
-  $box-shadow: $untitled-ui--message--default--box-shadow
+  $box-shadow: $untitled-ui--message--default--box-shadow,
+  $font: $untitled-ui--message--default--font
 ) {
   padding: $untitled-ui--message--default--border-width;
   border-radius: $radius;
   background: linear-gradient(to bottom, lighten($border-color, 7.5%) 0%, $border-color 100%);
   box-shadow: $untitled-ui--message--default--box-shadow;
   margin-bottom: 1em;
+  font-family: $font;
 
   &--wrapper {
     background: $background;
