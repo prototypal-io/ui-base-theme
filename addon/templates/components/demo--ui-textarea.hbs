@@ -1,0 +1,13 @@
+{{#ui-field kind=kind states=states size=size type="textarea" as |f|}}
+  {{#f.label}}
+    {{size}}
+  {{/f.label}}
+
+  {{f.input
+    value=size
+    placeholder=(concat size ", 4 rows")
+    rows=4
+    error=states.error
+    disabled=states.disabled
+  }}
+{{/ui-field}}
