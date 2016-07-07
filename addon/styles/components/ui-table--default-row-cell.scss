@@ -1,6 +1,8 @@
-@component() {
+@component(
+  $padding: $untitled-ui--table--default-row-cell--padding
+) {
   flex: 1;
-  padding: 0 0.2em;
+  padding: $padding;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

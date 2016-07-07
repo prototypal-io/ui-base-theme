@@ -1,5 +1,14 @@
-@component() {
+@component(
+  $padding: $untitled-ui--table--default-row--padding,
+  $font: $untitled-ui--table--default-row--font,
+  $hover-background: $untitled-ui--table--default-row--hover-background
+) {
   display: flex;
   line-height: 1.3em;
-  padding: 0.4em 0;
+  padding: $padding;
+  font-family: $font;
+
+  &:hover {
+    background: $hover-background;
+  }
 }

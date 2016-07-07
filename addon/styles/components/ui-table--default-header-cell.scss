@@ -1,27 +1,38 @@
-@component() {
+@component(
+  $color: $untitled-ui--table--default-header-cell--color,
+  $sortable-hover-color: $untitled-ui--table--default-header-cell--sortable-hover-color,
+  $sorted-border-style: $untitled-ui--table--default-header-cell--sorted-border-style,
+  $sorted-border-width: $untitled-ui--table--default-header-cell--sorted-border-width,
+  $sorted-border-color: $untitled-ui--table--default-header-cell--sorted-border-color,
+  $text-transform: $untitled-ui--table--default-header-cell--text-transform,
+  $padding: $untitled-ui--table--default-header-cell--padding,
+  $font: $untitled-ui--table--default-header-cell--font,
+  $font-size: $untitled-ui--table--default-header-cell--font-size
+) {
   flex: 1;
-  padding: 0.8em 0.3em;
+  padding: $padding;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #8ea1a8;
+  color: $color;
   letter-spacing: 1px;
-  font-size: 0.7em;
+  font-size: $font-size;
   line-height: 1.4em;
-  text-transform: uppercase;
+  text-transform: $text-transform;
   transition: color 0.2s, border-color 0.2s;
-  border-top: solid 3px transparent;
-  border-bottom: solid 3px transparent;
+  border-top: $sorted-border-style $sorted-border-width transparent;
+  border-bottom: $sorted-border-style $sorted-border-width transparent;
   box-sizing: border-box;
+  font-family: $font;
 
   &--sortable {
     &:hover {
       cursor: pointer;
-      color: #1787e5;
+      color: $sortable-hover-color;
     }
   }
 
   &--sorted {
-    border-bottom: solid 3px #e0eaed;
+    border-bottom: $sorted-border-style $sorted-border-width $sorted-border-color;
   }
 }
