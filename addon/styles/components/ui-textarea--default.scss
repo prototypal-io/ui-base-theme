@@ -30,6 +30,7 @@
     width: 100%;
     padding: 0.5em 0.4em; /* TODO: Make sizes match buttons */
     color: $color;
+    background: transparent;
 
     &:focus {
       outline: none;

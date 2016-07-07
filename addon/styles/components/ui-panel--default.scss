@@ -3,7 +3,8 @@
   $border-color: $untitled-ui--panel--default--border-color,
   $border-size: $untitled-ui--panel--default--border-size,
   $background: $untitled-ui--panel--default--background,
-  $box-shadow: $untitled-ui--panel--default--box-shadow
+  $box-shadow: $untitled-ui--panel--default--box-shadow,
+  $color: $untitled-ui--panel--default--color
 ) {
   display: flex;
   border-radius: $border-radius;
@@ -11,6 +12,7 @@
   background: linear-gradient(to bottom, lighten($border-color, 10%) 0%, $border-color 100%);
   box-shadow: $box-shadow;
   margin-bottom: 5px;
+  color: $color;
 
   &--wrapper {
     flex: 1;
