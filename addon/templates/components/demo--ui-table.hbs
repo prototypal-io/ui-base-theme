@@ -1,5 +1,5 @@
 {{!- BEGIN-SNIPPET demo--ui-table -}}
-{{#ui-table sortBy=sortBy data=data as |t|}}
+{{#ui-table sortBy=sortBy data=data size=size as |t|}}
   {{#t.layout breakpoint="all"}}
     {{#t.column size=(hash max="80px" min="80px") as |row|}}
       {{row.data.id}}
