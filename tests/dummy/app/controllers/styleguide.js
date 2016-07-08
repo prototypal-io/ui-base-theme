@@ -8,6 +8,7 @@ let uiComponentNames = uiComponentModules
   .map(m => m.replace(/^ui-base-theme\/components\//, ''))
   .filter(m => !/--/.test(m));
 
+uiComponentNames = ['ui-button'];
 Ember.A(uiComponentNames).removeObjects([
   'ui-component',
   'ui-demo',

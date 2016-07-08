@@ -14,6 +14,18 @@ export default Ember.Component.extend({
     this._super(...arguments);
 
     this.uiPrefix = this._debugContainerKey.split(':')[1];
+    this._activeUIStates = new Ember.Object();
+    this._uiStates = {};
+  },
+
+  didReceiveAttrs() {
+    this._super(...arguments);
+
+    let _activeState = this.get('_activeState');
+
+    if (_activeState) {
+      this.set('_activeUIStates', _activeState);
+    }
   },
 
   classes: Ember.computed('class', 'size', function() {

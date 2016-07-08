@@ -1,5 +1,23 @@
+{{#ui-button-group size="x-small" as |group|}}
+  {{#each kinds as |kind|}}
+    {{#group.button active=(eq currentKind kind) onclick=(action "setKind" kind)}}
+      {{kind}}
+    {{/group.button}}
+  {{/each}}
+{{/ui-button-group}}
+
+{{#ui-button-group size="x-small" as |group|}}
+  {{#each states as |state|}}
+    {{#group.button active=(get activeStates state) onclick=(action "setState" state)}}
+      {{state}}
+    {{/group.button}}
+  {{/each}}
+{{/ui-button-group}}
+
+{{#each sizes as |size|}}
 {{!- BEGIN-SNIPPET demo--ui-button -}}
-{{#ui-button kind=kind states=states size=size}}
+{{#ui-button _activeState=activeStates kind=currentKind size=size}}
   Button
 {{/ui-button}}
 {{!- END-SNIPPET -}}
+{{/each}}
