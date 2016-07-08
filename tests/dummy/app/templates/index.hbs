@@ -684,4 +684,15 @@
   {{/panel.content}}
 {{/ui-panel}}
 
+{{#ui-panel as |panel|}}
+  {{#panel.titlebar}}
+    Loading
+  {{/panel.titlebar}}
+
+  {{#panel.content}}
+    {{ui-loading}}
+
+  {{/panel.content}}
+{{/ui-panel}}
+
 {{outlet}}

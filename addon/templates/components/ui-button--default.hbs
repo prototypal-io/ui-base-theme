@@ -13,5 +13,10 @@
     <div class="label {{ui-state states 'active' 'loading' el='label'}}">
       {{yield}}
     </div>
+    {{#if states.loading}}
+      <div class="loader">
+        {{ui-loading kind="default" size=size}}
+      </div>
+    {{/if}}
   </div>
 </button>
