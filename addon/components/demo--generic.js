@@ -16,10 +16,16 @@ export default Ember.Component.extend({
   init() {
     this._super(...arguments);
 
-    this.sizes = [].concat(SIZES);
+    if (!this.kinds) {
+      this.kinds = ['default'];
+    }
+
+    if (!this.sizes) {
+      this.sizes = [].concat(SIZES);
+    }
+
     this.activeStates = {};
     this.currentKind = 'default';
-    this.kinds = ['default'];
   },
 
   actions: {

@@ -3,7 +3,6 @@
     {{#p.titlebar}}{{demoComponent.name}}{{/p.titlebar}}
 
     {{#p.content}}
-      {{#if false}}
       <div class="ui-demo--modifiers">
         {{#ui-button-group size="x-small" as |group|}}
           {{#each demoComponent.kinds as |kind|}}
@@ -21,12 +20,16 @@
           {{/each}}
         {{/ui-button-group}}
       </div>
-      {{/if}}
 
+      {{#each sizes as |size|}}
         {{component demoComponentToRender
           componentBeingDemoed=demoComponent.name
+          kind=currentKind
+          activeStates=activeStates
+          size=size
           action=(hash alert=(action "alert"))
         }}
+      {{/each}}
 
       {{code-snippet name=(concat "demo--" demoComponent.name ".hbs")}}
     {{/p.content}}

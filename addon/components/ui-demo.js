@@ -27,6 +27,7 @@ export default Ember.Component.extend({
     let componentName = this.get('demoComponent.name');
     let demoComponentName = `demo--${componentName}`;
     let demoComponent = Ember.getOwner(this)._lookupFactory(`component:${demoComponentName}`);
+
     if (demoComponent) {
       console.log(`rendering ${componentName} demo with ${demoComponentName}`);
       return demoComponentName;
@@ -41,8 +42,8 @@ export default Ember.Component.extend({
       alert(message);
     },
 
-    setKind(size) {
-      this.set('currentKind', size);
+    setKind(kind) {
+      this.set('currentKind', kind);
     },
 
     setState(state) {

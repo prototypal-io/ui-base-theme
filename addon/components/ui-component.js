@@ -21,10 +21,10 @@ export default Ember.Component.extend({
   didReceiveAttrs() {
     this._super(...arguments);
 
-    let _activeState = this.get('_activeState');
+    let _activeStates = this.get('_activeStates');
 
-    if (_activeState) {
-      this.set('_activeUIStates', _activeState);
+    if (_activeStates) {
+      this.set('_activeUIStates', _activeStates);
     }
   },
 
