@@ -1,20 +1,7 @@
-import DemoGeneric from './demo--generic';
+import Ember from 'ember';
 import layout from 'ui-base-theme/templates/components/demo--ui-button';
 
-export default DemoGeneric.extend({
+export default Ember.Component.extend({
   layout,
-
-  kinds: [
-    'default',
-    'material',
-    'primary',
-    'simple'
-  ],
-
-  states: [
-    'active',
-    'focus',
-    'disabled',
-    'loading'
-  ],
+  tagName: ''
 });

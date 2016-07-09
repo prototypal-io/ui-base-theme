@@ -1,5 +1,5 @@
 {{!- BEGIN-SNIPPET demo--ui-textarea -}}
-{{#ui-field kind=kind states=states size=size type="textarea" as |f|}}
+{{#ui-field kind=kind _activeStates=activeStates size=size type="textarea" as |f|}}
   {{#f.label}}
     {{size}}
   {{/f.label}}
@@ -8,8 +8,8 @@
     value=size
     placeholder=(concat size ", 4 rows")
     rows=4
-    error=states.error
-    disabled=states.disabled
+    error=activeStates.error
+    disabled=activeStates.disabled
   }}
 {{/ui-field}}
 {{!- END-SNIPPET -}}

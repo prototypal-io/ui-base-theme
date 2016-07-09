@@ -1,6 +1,6 @@
 {{!- BEGIN-SNIPPET demo--ui-checkbox -}}
-{{#ui-field kind=kind states=states size=size type="checkbox" as |f|}}
-  {{#f.input}}
+{{#ui-field kind=kind size=size type="checkbox" as |f|}}
+  {{#f.input disabled=activeStates.disabled error=activeStates.error}}
     {{size}}
   {{/f.input}}
 {{/ui-field}}

@@ -34,17 +34,19 @@ let componentCustomizations = {
   'ui-button': {
     kinds: ['default', 'material', 'primary', 'simple'],
     states: ['active', 'disabled', 'focus', 'loading']
+  },
+  'ui-checkbox': {
+    states: ['disabled', 'error']
+  },
+  'ui-textarea': {
+    states: ['disabled', 'error']
   }
 };
 
 Ember.A(uiComponentNames).removeObjects(COMPONENT_BLACKLIST);
 
-let kinds = ['default'];
-let states = [];
-// let states = ['active', 'focus', 'disabled', 'loading', 'error'];
-
 let allComponents = uiComponentNames.map((componentName) => {
-  let attrs = { name: componentName, kinds: kinds.slice(), states: states.slice() };
+  let attrs = { name: componentName, kinds: ['default'], states: [] };
   let customizations = componentCustomizations[componentName];
 
   if (customizations) {
