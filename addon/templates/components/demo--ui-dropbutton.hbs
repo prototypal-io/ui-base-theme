@@ -9,10 +9,10 @@
       {{#list.item onclick=(action "save")}}
         {{ui-icon kind="fontawesome" icon="save"}} Save
       {{/list.item}}
-      {{#list.item onclick=(action "save")}}
+      {{#list.item onclick=(action "edit")}}
         {{ui-icon kind="fontawesome" icon="pencil"}} Edit
       {{/list.item}}
-      {{#list.item onclick=(action "save")}}
+      {{#list.item onclick=(action "delete")}}
         {{ui-icon kind="fontawesome" icon="trash"}} Delete
       {{/list.item}}
     {{/popup.list}}
