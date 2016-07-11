@@ -10,7 +10,7 @@
          {{if group.isLastChild 'last-child'}}"
   id="{{id}}">
   <div class="wrapper {{ui-state states 'active' 'disabled' el='wrapper'}}">
-    <div class="label {{ui-state states 'active' 'loading' el='label'}}">
+    <div class="label {{ui-state states 'active' 'disabled' 'loading' el='label'}}">
       {{yield}}
     </div>
     {{#if states.loading}}

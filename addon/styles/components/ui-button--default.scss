@@ -5,40 +5,51 @@
     $radius: $untitled-ui--ui-button--default--radius,
     $color: $untitled-ui--ui-button--default--color,
     $border-color: $untitled-ui--ui-button--default--border-color,
+    $border-width: $untitled-ui--ui-button--default--border-width,
     $background: $untitled-ui--ui-button--default--background,
+    $shadow: $untitled-ui--ui-button--default--shadow,
+    $active-background: $untitled-ui--ui-button--default--active-background,
+    $active-shadow: $untitled-ui--ui-button--default--active-shadow,
     $disabled-border-color: $untitled-ui--ui-button--default--disabled-border-color,
     $disabled-background: $untitled-ui--ui-button--default--disabled-background,
-    $font: $untitled-ui--ui-button--default--font
+    $disabled-shadow: $untitled-ui--ui-button--default--disabled-shadow,
+    $font: $untitled-ui--ui-button--default--font,
+    $text-transform: $untitled-ui--ui-button--default--text-transform,
+    $focus-color: $untitled-ui--ui-button--default--focus-color
   ) {
   @include ui-button();
   @include ui-button--base();
 
   border-radius: $radius;
   cursor: pointer;
-  padding: 1px;
+  padding: $border-width;
   line-height: 2.3em;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow;
   background: linear-gradient(to bottom, lighten($border-color, 14%) 0%, $border-color 100%);
   color: $color;
   fill: $color;
   font-family: $font;
+  text-transform: $text-transform;
 
   &--focus {
-    background: rgba(0, 107, 255, 0.5); /* make the border part of the shadow */
-    box-shadow: 0px 0px 4px #0090ff;
+    @if $focus-color != transparent {
+      background: transparentize($focus-color, 0.5); /* make the border part of the shadow */
+      box-shadow: 0px 0px 4px $focus-color;
+    };
     z-index: 2;
   }
 
   &--active {
     background: linear-gradient(to top, lighten($border-color, 12%) 0%, $border-color 100%);
     box-shadow: none;
+    box-shadow: $active-shadow;
   }
 
   &--disabled {
     pointer-events: none;
     background: linear-gradient(to bottom, lighten($border-color, 15%) 0%, $border-color 100%);
-    color: $disabled-border-color;
     fill: $disabled-border-color;
+    box-shadow: $disabled-shadow;
   }
 
   &--group-button {
@@ -60,7 +71,11 @@
     border-radius: inherit;
     background: $background;
 
-    &--active, &--disabled {
+    &--active {
+      background: $active-background;
+    }
+
+    &--disabled {
       background: $disabled-background;
     }
   }
@@ -76,6 +91,10 @@
 
     &--active {
       transform: translateY(1px);
+    }
+
+    &--disabled {
+      opacity: 0.7;
     }
 
     &--loading {

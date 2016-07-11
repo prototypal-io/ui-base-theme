@@ -2,11 +2,16 @@
   $radius: $untitled-ui--checkbox--default--radius,
   $color: $untitled-ui--checkbox--default--color,
   $border-color: $untitled-ui--checkbox--default--border-color,
+  $border-width: $untitled-ui--checkbox--default--border-width,
   $background: $untitled-ui--checkbox--default--background,
+  $box-shadow: $untitled-ui--checkbox--default--box-shadow,
   $checked-border-color: $untitled-ui--checkbox--default--checked-border-color,
   $checked-background: $untitled-ui--checkbox--default--checked-background,
+  $disabled-color: $untitled-ui--checkbox--default--disabled-color,
   $disabled-border-color: $untitled-ui--checkbox--default--disabled-border-color,
   $disabled-background: $untitled-ui--checkbox--default--disabled-background,
+  $disabled-checked-border-color: $untitled-ui--checkbox--default--disabled-checked-border-color,
+  $disabled-checked-background: $untitled-ui--checkbox--default--disabled-checked-background,
   $error-color: $untitled-ui--checkbox--default--error-color,
   $focus-color: $untitled-ui--checkbox--default--focus-color,
   $font: $untitled-ui--checkbox--default--font
@@ -21,12 +26,12 @@
   }
 
   &--component {
-    border-radius: 0.2em;
-    padding: 1px;
+    border-radius: $radius;
+    padding: $border-width;
     display: inline-block;
     vertical-align: top;
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-    background: linear-gradient(to bottom, lighten($border-color, 15%) 0%, $border-color 100%);
+    box-shadow: $box-shadow;
+    background: $border-color;
 
     &--wrapper {
       border-radius: inherit;
@@ -65,8 +70,10 @@
     }
 
     .ui-checkbox--default--input:focus + .ui-checkbox--default--component {
-      background: lighten($focus-color, 20%);
-      box-shadow: 0px 0px 4px $focus-color;
+      @if $focus-color != transparent {
+        background: lighten($focus-color, 20%);
+        box-shadow: 0px 0px 4px $focus-color
+      };
 
       .ui-checkbox--default--component--icon {
         opacity: 0.5;
@@ -75,8 +82,10 @@
 
     &.ui-checkbox--default--checked {
       .ui-checkbox--default--input:focus + .ui-checkbox--default--component {
-        background: $focus-color;
-        box-shadow: 0px 0px 4px $focus-color;
+        @if $focus-color != transparent {
+          background: $focus-color;
+          box-shadow: 0px 0px 4px $focus-color
+        };
 
         .ui-checkbox--default--component--icon {
           opacity: 1;
@@ -87,9 +96,10 @@
 
   &--disabled {
     cursor: inherit;
+    color: $disabled-color;
 
     .ui-checkbox--default--component {
-      background: linear-gradient(to bottom, lighten($disabled-border-color, 25%) 0%, lighten($disabled-border-color, 10%) 100%);
+      background: $disabled-border-color;
     }
 
     .ui-checkbox--default--component--wrapper {
@@ -98,6 +108,14 @@
 
     /* Disabled Checked */
     &.ui-checkbox--default--checked {
+      .ui-checkbox--default--component {
+        background: $disabled-checked-border-color;
+      }
+
+      .ui-checkbox--default--component--wrapper {
+        background: $disabled-checked-background;
+      }
+
       .ui-checkbox--default--component--icon {
         opacity: 0.5;
       }
@@ -106,7 +124,7 @@
 
   &--checked {
     .ui-checkbox--default--component {
-      background: linear-gradient(to bottom, lighten($checked-border-color, 15%) 0%, $checked-border-color 100%);
+      background: $checked-border-color;
     }
 
     .ui-checkbox--default--component--wrapper {

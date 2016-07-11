@@ -9,9 +9,13 @@
     $radius: $untitled-ui--button--primary--radius,
     $color: $untitled-ui--button--primary--color,
     $border-color: $untitled-ui--button--primary--border-color,
+    $border-width: $untitled-ui--button--primary--border-width,
     $background: $untitled-ui--button--primary--background,
+    $active-background: $untitled-ui--button--primary--active-background,
     $disabled-background: $untitled-ui--button--primary--disabled-background,
     $disabled-border-color: $untitled-ui--button--primary--disabled-border-color,
-    $font: $untitled-ui--button--primary--font
+    $disabled-shadow: $untitled-ui--button--primary--disabled-shadow,
+    $font: $untitled-ui--button--primary--font,
+    $text-transform: $untitled-ui--button--primary--text-transform
   );
 };
