@@ -59,6 +59,7 @@ $untitled-ui--checkbox--default--disabled-border-color: linear-gradient(to botto
 $untitled-ui--checkbox--default--disabled-background: lighten($untitled-ui--default-color, 55%) !default;
 $untitled-ui--checkbox--default--disabled-checked-border-color: linear-gradient(to bottom, lighten($untitled-ui--primary-color, 15%) 0%, $untitled-ui--primary-color 100%) !default;
 $untitled-ui--checkbox--default--disabled-checked-background: lighten($untitled-ui--primary-color, 10%) !default;
+$untitled-ui--checkbox--default--checked-color: #ffffff !default;
 $untitled-ui--checkbox--default--checked-border-color: linear-gradient(to bottom, lighten($untitled-ui--primary-color, 15%) 0%, $untitled-ui--primary-color 100%) !default;
 $untitled-ui--checkbox--default--checked-background: lighten($untitled-ui--primary-color, 10%) !default;
 $untitled-ui--checkbox--default--error-color: $untitled-ui--error-color !default;

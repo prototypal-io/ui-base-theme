@@ -5,6 +5,7 @@
   $border-width: $untitled-ui--checkbox--default--border-width,
   $background: $untitled-ui--checkbox--default--background,
   $box-shadow: $untitled-ui--checkbox--default--box-shadow,
+  $checked-color: $untitled-ui--checkbox--default--checked-color,
   $checked-border-color: $untitled-ui--checkbox--default--checked-border-color,
   $checked-background: $untitled-ui--checkbox--default--checked-background,
   $disabled-color: $untitled-ui--checkbox--default--disabled-color,
@@ -133,8 +134,7 @@
 
     .ui-checkbox--default--component--icon {
       opacity: 1;
-      color: #ffffff;
-      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+      color: $checked-color;
     }
   }
 
