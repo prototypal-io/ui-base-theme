@@ -1,5 +1,7 @@
 <h1>Styleguide</h1>
 
-{{#each allComponents as |demoComponent|}}
-  {{ui-demo demoComponent=demoComponent}}
-{{/each}}
+{{#ui-tools}}
+  {{#each allComponents as |demoComponent|}}
+    {{ui-demo demoComponent=demoComponent}}
+  {{/each}}
+{{/ui-tools}}

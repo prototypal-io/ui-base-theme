@@ -2,13 +2,13 @@
 @import './ui-button--base';
 
 @component(
-    $radius: $untitled-ui--button--default--radius,
-    $color: $untitled-ui--button--default--color,
-    $border-color: $untitled-ui--button--default--border-color,
-    $background: $untitled-ui--button--default--background,
-    $disabled-border-color: $untitled-ui--button--default--disabled-border-color,
-    $disabled-background: $untitled-ui--button--default--disabled-background,
-    $font: $untitled-ui--button--default--font
+    $radius: $untitled-ui--ui-button--default--radius,
+    $color: $untitled-ui--ui-button--default--color,
+    $border-color: $untitled-ui--ui-button--default--border-color,
+    $background: $untitled-ui--ui-button--default--background,
+    $disabled-border-color: $untitled-ui--ui-button--default--disabled-border-color,
+    $disabled-background: $untitled-ui--ui-button--default--disabled-background,
+    $font: $untitled-ui--ui-button--default--font
   ) {
   @include ui-button();
   @include ui-button--base();

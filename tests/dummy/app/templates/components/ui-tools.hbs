@@ -1,0 +1,21 @@
+<div style="width: {{leftWidth}}%; float: left">
+  {{yield}}
+</div>
+<div style="margin-left: 5%; width: {{rightWidth}}%; float: left">
+  {{#ui-panel as |panel|}}
+    {{#panel.titlebar}}
+      Theme editor
+    {{/panel.titlebar}}
+
+    {{#panel.content}}
+      {{#each uiTheme.variables as |v|}}
+        {{#ui-field as |f|}}
+          {{#f.label}}
+            {{v.name}}
+          {{/f.label}}
+          {{f.input value=v.value focus-out=(action "save")}}
+        {{/ui-field}}
+      {{/each}}
+    {{/panel.content}}
+  {{/ui-panel}}
+</div>

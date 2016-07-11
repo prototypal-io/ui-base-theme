@@ -3,6 +3,13 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   cache: {},
 
+  init() {
+    this._super(...arguments);
+    Ember.$.getJSON("/theme").then(res => {
+      this.set('variables', res.slice(0, 50));
+    })
+  },
+
   lookup(base, kind, theme) {
     let identifier;
 

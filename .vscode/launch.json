@@ -7,7 +7,7 @@
       "request": "launch",
       "program": "${workspaceRoot}/node_modules/.bin/ember",
       "stopOnEntry": false,
-      "args": ["build"],
+      "args": ["serve"],
       "cwd": "${workspaceRoot}",
       "preLaunchTask": null,
       "runtimeExecutable": null,
