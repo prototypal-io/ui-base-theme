@@ -1,0 +1,19 @@
+<div class=":component
+            {{classes.class}}
+            {{classes.size}}
+            {{if hidePlaceholder 'hide-placeholder'}}
+            {{if focus 'has-focus'}}">
+  <div class="wrapper">
+    <div class="placeholder">{{placeholder}}</div>
+    {{input
+      id=ids.input
+      type=type
+      value=value
+      disabled=states.disabled
+      aria-labelledby=ids.label
+      class=(concat "ui-input--material--input "
+        (ui-state states 'disabled' 'error' el='ui-input--default--input'))
+      focus-in=(action "focusIn")
+      focus-out=(action "focusOut")}}
+  </div>
+</div>

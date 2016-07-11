@@ -1,0 +1,51 @@
+@component() {
+  position: relative;
+  border-bottom: solid 1px transparent;
+  padding-top: 1em;
+
+  &--placeholder {
+    position: absolute;
+    top: 1.5em;
+    left: 0.4em;
+    color: #e1e1e1;
+    pointer-events: none;
+    transition: transform 0.2s;
+    transform-origin: 0px 0px;
+  }
+
+  &--input {
+    border: none;
+    border-radius: inherit;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: 0.5em 0.4em;
+    outline: none;
+    background: transparent;
+    border-bottom: solid 1px #e1e1e1;
+  }
+
+  &--hide-placeholder {
+    .ui-input--material--placeholder  {
+      color: #474747;
+    }
+
+    .ui-input--material--placeholder  {
+      transform: scale(0.7) translateY(-1.5em);
+    }
+  }
+
+  &--has-focus {
+    color: #ff5407;
+    border-bottom: none;
+
+    .ui-input--material--input  {
+      border-bottom: solid 2px #ff5407;
+    }
+
+    .ui-input--material--placeholder  {
+      color: #ff5407;
+    }
+  }
+}
