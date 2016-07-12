@@ -3,6 +3,8 @@ import UIComponent from './ui-component';
 import layout from 'ui-base-theme/templates/components/ui-button';
 import state from '../state';
 
+const { $ } = Ember;
+
 export default UIComponent.extend({
   layout,
 
@@ -20,7 +22,7 @@ export default UIComponent.extend({
       loading: this.get('loading'),
       active: this.get('browserActive') || this.get('active'),
       focus: this.get('focus')
-    }
+    };
   }),
 
   group: Ember.computed('buttonGroup.[]', function() {
@@ -60,7 +62,7 @@ export default UIComponent.extend({
   },
 
   actions: {
-    onclick(event) {
+    onclick() {
       this.sendAction('onclick');
     }
   }

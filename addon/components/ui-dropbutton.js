@@ -16,7 +16,7 @@ export default UIComponent.extend({
       disabled: this.get('isDisabled'),
       loading: this.get('loading'),
       active: this.get('showPopup')
-    }
+    };
   }),
 
   targetId: Ember.computed(function() {

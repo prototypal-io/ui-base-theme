@@ -1,5 +1,8 @@
+import Ember from 'ember';
 import UIComponent from './ui-component';
 import layout from '../templates/components/ui-table';
+
+const { $ } = Ember;
 
 export default UIComponent.extend({
   layout,
@@ -21,7 +24,7 @@ export default UIComponent.extend({
     const breakpoints = this.get('breakpoints').sort();
 
     if (breakpoints.length && breakpoints.indexOf('all') === -1) {
-      Ember.Logger.warn("No default layout provided for table row.")
+      Ember.Logger.warn("No default layout provided for table row.");
     }
 
     return breakpoints.find((breakpoint) => {

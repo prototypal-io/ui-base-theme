@@ -1,8 +1,6 @@
 import Ember from 'ember';
 import layout from 'ui-base-theme/templates/components/ui-demo';
 
-const assign = Object.assign;
-
 export default Ember.Component.extend({
   layout,
   tagName: '',

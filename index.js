@@ -1,10 +1,8 @@
 /* jshint node: true */
 'use strict';
 
-var UITheme = require('untitled-ui/theme');
-var fs = require('fs');
-var path = require('path');
+var Theme = require('untitled-ui/theme');
 
-module.exports = UITheme.extend({
+module.exports = Theme.extend({
   name: 'ui-base-theme'
 });

@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-prevent-scroll-outside';
 
+let element;
+
 const KEYS_THAT_SCROLL_PAGE = [32, 37, 38, 39, 40];
 const EVENTS = [
   { bindTo: element,  event: 'wheel',     callback: onElementScroll },
@@ -9,8 +11,6 @@ const EVENTS = [
   { bindTo: window,   event: 'touchmove', callback: onWindowScroll },
   { bindTo: document, event: 'keydown',   callback: handleKeyPress }
 ];
-
-let element;
 
 export default Ember.Component.extend({
   layout,

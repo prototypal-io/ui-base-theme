@@ -14,6 +14,6 @@ export default UIComponent.extend({
       disabled: this.get('disabled'),
       error: this.get('error'),
       checked: this.get('value')
-    }
+    };
   })
 });

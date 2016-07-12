@@ -24,6 +24,6 @@ export default Ember.Component.extend({
     return {
       disabled: this.get('disabled'),
       error: this.get('error')
-    }
+    };
   })
 });

@@ -9,9 +9,9 @@ const getDefaultValue = function(component, options) {
 export default function state(options = {}) {
   return Ember.computed('_activeUIStates', {
     get(key) {
-      return get(this._activeUIStates, key)
-        || get(this._uiStates, key)
-        || getDefaultValue(this, options);
+      return get(this._activeUIStates, key) ||
+             get(this._uiStates, key) ||
+             getDefaultValue(this, options);
     },
 
     set(key, value) {
@@ -24,4 +24,4 @@ export default function state(options = {}) {
       return value;
     }
   });
-};
+}

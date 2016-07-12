@@ -2,6 +2,8 @@ import Ember from 'ember';
 import UIComponent from './ui-component';
 import layout from '../templates/components/ui-modal';
 
+const { $ } = Ember;
+
 export default UIComponent.extend({
   layout,
 
