@@ -10,6 +10,6 @@ export default UIComponent.extend({
       class: this.get('class'),
       parent: 'ui-tabs',
       size: `ui-font-size--${this.get('size')}`
-    }
+    };
   })
 });

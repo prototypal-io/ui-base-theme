@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import layout from 'ui-base-theme/templates/components/ui-ripple';
 
+const { $ } = Ember;
+
 // Based on the ember-paper implemenation
 // https://github.com/miguelcobain/ember-paper/blob/8b7dd871496e312afad5ef0d9e928a36307ebdfd/addon/mixins/ripple-mixin.js
 export default Ember.Component.extend({

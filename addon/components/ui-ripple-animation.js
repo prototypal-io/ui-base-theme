@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import layout from 'ui-base-theme/templates/components/ui-ripple-animation';
 
+const { $ } = Ember;
+
 export default Ember.Component.extend({
   layout,
 
@@ -17,7 +19,6 @@ export default Ember.Component.extend({
   },
 
   createRipple(left, top, container) {
-    let ctrl = this;
     let ripple = $('<div class="ui-ripple-animation--ripple"></div>');
     let width = container.clientWidth;
     let height = container.clientHeight;

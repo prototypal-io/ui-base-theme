@@ -22,6 +22,6 @@ export default UIComponent.extend({
   states: Ember.computed('disabled', function() {
     return {
       disabled: this.get('disabled')
-    }
+    };
   })
 });
