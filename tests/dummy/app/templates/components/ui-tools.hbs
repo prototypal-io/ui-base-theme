@@ -1,3 +1,8 @@
+<style>
+  .ui-inspecting {
+    background: #A0C6E8;
+  }
+</style>
 <div style="width: {{leftWidth}}%; float: left">
   {{yield}}
 </div>
@@ -8,6 +13,30 @@
     {{/panel.titlebar}}
 
     {{#panel.content}}
+      {{#ui-button size="small" onclick=(action "chooseComponent")}}
+        {{ui-icon kind="fontawesome" icon="search"}}
+      {{/ui-button}}
+
+      {{#ui-button size="small" onclick=(action "loadTheme")}}
+        1
+      {{/ui-button}}
+
+      {{#ui-button size="small" onclick=(action "loadTheme" "alternative")}}
+        2
+      {{/ui-button}}
+
+      {{#ui-button size="small" onclick=(action "loadTheme" "material")}}
+        3
+      {{/ui-button}}
+
+      <p>
+        {{#if uiTheme.filteringBy}}
+          Component: {{uiTheme.filteringBy}}
+        {{else}}
+          Globals
+        {{/if}}
+      </p>
+
       {{#each uiTheme.variables as |v|}}
         {{#ui-field as |f|}}
           {{#f.label}}

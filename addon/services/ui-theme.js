@@ -5,9 +5,30 @@ export default Ember.Service.extend({
 
   init() {
     this._super(...arguments);
-    Ember.$.getJSON("/theme").then(res => {
+    this.loadTheme();
+  },
+
+  loadTheme(name) {
+    let url = "/theme";
+    if (name) { url += `?variant=${name}`; }
+    Ember.$.getJSON(url).then(res => {
+      this.set('allVariables', res);
       this.set('variables', res.slice(0, 50));
-    })
+    });
+  },
+
+  resetFilter() {
+    this.set('filteringBy', null);
+    this.set('variables', this.get('allVariables').slice(0, 50));
+  },
+
+  filterVariablesFor(componentName) {
+    this.set('filteringBy', componentName);
+    let allVariables = this.get('allVariables');
+    let filteredVariables = allVariables.filter(varObj => {
+      return varObj.name.indexOf(componentName) !== -1;
+    });
+    this.set('variables', filteredVariables);
   },
 
   lookup(base, kind, theme) {

@@ -3,6 +3,7 @@ import Ember from 'ember';
 
 const COMPONENT_BLACKLIST = [
   'ui-component',
+  'ui-button-group',
   'ui-demo',
   'ui-dropbutton-trigger',
   'ui-icon',
@@ -32,7 +33,7 @@ let uiComponentNames = uiComponentModules
 
 let componentCustomizations = {
   'ui-button': {
-    kinds: ['default', 'material', 'primary', 'simple'],
+    kinds: ['default', 'primary'],
     states: ['active', 'disabled', 'focus', 'loading']
   },
   'ui-checkbox': {

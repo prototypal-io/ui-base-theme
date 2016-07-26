@@ -1,21 +1,21 @@
 @component(
-  $radius: $untitled-ui--checkbox--default--radius,
-  $color: $untitled-ui--checkbox--default--color,
-  $border-color: $untitled-ui--checkbox--default--border-color,
-  $border-width: $untitled-ui--checkbox--default--border-width,
-  $background: $untitled-ui--checkbox--default--background,
-  $box-shadow: $untitled-ui--checkbox--default--box-shadow,
-  $checked-color: $untitled-ui--checkbox--default--checked-color,
-  $checked-border-color: $untitled-ui--checkbox--default--checked-border-color,
-  $checked-background: $untitled-ui--checkbox--default--checked-background,
-  $disabled-color: $untitled-ui--checkbox--default--disabled-color,
-  $disabled-border-color: $untitled-ui--checkbox--default--disabled-border-color,
-  $disabled-background: $untitled-ui--checkbox--default--disabled-background,
-  $disabled-checked-border-color: $untitled-ui--checkbox--default--disabled-checked-border-color,
-  $disabled-checked-background: $untitled-ui--checkbox--default--disabled-checked-background,
-  $error-color: $untitled-ui--checkbox--default--error-color,
-  $focus-color: $untitled-ui--checkbox--default--focus-color,
-  $font: $untitled-ui--checkbox--default--font
+  $radius: $untitled-ui--ui-checkbox--default--radius,
+  $color: $untitled-ui--ui-checkbox--default--color,
+  $border-color: $untitled-ui--ui-checkbox--default--border-color,
+  $border-width: $untitled-ui--ui-checkbox--default--border-width,
+  $background: $untitled-ui--ui-checkbox--default--background,
+  $box-shadow: $untitled-ui--ui-checkbox--default--box-shadow,
+  $checked-color: $untitled-ui--ui-checkbox--default--checked-color,
+  $checked-border-color: $untitled-ui--ui-checkbox--default--checked-border-color,
+  $checked-background: $untitled-ui--ui-checkbox--default--checked-background,
+  $disabled-color: $untitled-ui--ui-checkbox--default--disabled-color,
+  $disabled-border-color: $untitled-ui--ui-checkbox--default--disabled-border-color,
+  $disabled-background: $untitled-ui--ui-checkbox--default--disabled-background,
+  $disabled-checked-border-color: $untitled-ui--ui-checkbox--default--disabled-checked-border-color,
+  $disabled-checked-background: $untitled-ui--ui-checkbox--default--disabled-checked-background,
+  $error-color: $untitled-ui--ui-checkbox--default--error-color,
+  $focus-color: $untitled-ui--ui-checkbox--default--focus-color,
+  $font: $untitled-ui--ui-checkbox--default--font
 ) {
   display: inline-block;
   cursor: pointer;
