@@ -1,43 +1,45 @@
-{{#ui-field as |f|}}
-  {{#f.label}}
-    Home Address
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+{{#ui-fieldset as |fs|}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      Home Address
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
 
-{{#ui-field as |f|}}
-  {{#f.label}}
-    Apt Site (Optional)
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      Apt Site (Optional)
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
 
-{{#ui-field as |f|}}
-  {{#f.label}}
-    Zip Code
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      Zip Code
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
 
-{{#ui-tooltip as |tooltip|}}
-  {{#tooltip.target}}
-    (?)
-  {{/tooltip.target}}
-  {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  {{/tooltip.popup}}
-{{/ui-tooltip}}
+  {{#ui-tooltip as |tooltip|}}
+    {{#tooltip.target}}
+      (?)
+    {{/tooltip.target}}
+    {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    {{/tooltip.popup}}
+  {{/ui-tooltip}}
 
-{{#ui-field as |f|}}
-  {{#f.label}}
-    City
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      City
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
 
-{{#ui-field as |f|}}
-  {{#f.label}}
-    State
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      State
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
+{{/ui-fieldset}}

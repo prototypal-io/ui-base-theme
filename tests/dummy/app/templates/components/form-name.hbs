@@ -1,20 +1,22 @@
-{{#ui-field as |f|}}
-  {{#f.label}}
-    First Name
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+{{#ui-fieldset as |fs|}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      First Name
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
 
-{{#ui-field as |f|}}
-  {{#f.label}}
-    MI
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      MI
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
 
-{{#ui-field as |f|}}
-  {{#f.label}}
-    Last Name
-  {{/f.label}}
-  {{f.input type="email" value=value}}
-{{/ui-field}}
+  {{#fs.field as |f|}}
+    {{#f.label}}
+      Last Name
+    {{/f.label}}
+    {{f.input type="email" value=value}}
+  {{/fs.field}}
+{{/ui-fieldset}}
