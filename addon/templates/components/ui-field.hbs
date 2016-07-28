@@ -5,6 +5,7 @@
   ids=(hash
     label=generatedLabelId
     input=generatedInputId)
-  input=input as |component|}}
+  input=(component input onFocusIn=(action "focusIn")
+                         onFocusOut=(action "focusOut")) as |component|}}
     {{yield component}}
 {{/component}}

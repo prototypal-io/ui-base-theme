@@ -445,11 +445,14 @@
   {{/panel.titlebar}}
 
   {{#panel.content}}
-    {{#ui-select value=selectedValue as |x|}}
-      {{#x.option value=1}}1{{/x.option}}
-      {{#x.option value=2}}2{{/x.option}}
-      {{#x.option value=3}}3{{/x.option}}
-    {{/ui-select}}
+
+    {{#ui-field type="select" as |f|}}
+      {{#f.input value=selectedValue as |x|}}
+        {{#x.option value=1}}1{{/x.option}}
+        {{#x.option value=2}}2{{/x.option}}
+        {{#x.option value=3}}3{{/x.option}}
+      {{/f.input}}
+    {{/ui-field}}
 
     <br /><br />
     selected: {{selectedValue}}
