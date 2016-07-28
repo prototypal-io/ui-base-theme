@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('inbox');
   });
   this.route('styleguide');
+  this.route('work-order');
 });
 
 export default Router;
