@@ -1,5 +1,37 @@
-<h1>Styleguide</h1>
+<box fit>
+  <h1>Styleguide</h1>
+</box>
+<hbox>
+  <box sm="3">
+    {{#ui-panel as |p|}}
+      {{#p.titlebar}}
+        Components
+      {{/p.titlebar}}
 
-{{#each allComponents as |demoComponent|}}
-  {{ui-demo demoComponent=demoComponent}}
-{{/each}}
+      {{#p.content}}
+        {{#each model.theme.components as |component|}}
+          {{#if component.demoFile}}
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={{contains component.name filter}}
+                  onchange={{action "toggleComponentFilter" component.name}}
+                />
+                {{component.name}}
+              </label>
+            </div>
+          {{/if}}
+        {{/each}}
+      {{/p.content}}
+    {{/ui-panel}}
+  </box>
+
+  <box sm="9">
+    {{#each filteredComponents as |component|}}
+      {{#if component.demoFile}}
+        {{ui-demo demoComponent=component}}
+      {{/if}}
+    {{/each}}
+  </box>
+</hbox>
