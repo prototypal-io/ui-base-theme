@@ -1,61 +1,33 @@
-/* globals requirejs */
 import Ember from 'ember';
 
-const COMPONENT_BLACKLIST = [
-  'ui-component',
-  'ui-demo',
-  'ui-dropbutton-trigger',
-  'ui-icon',
-  'ui-input',
-  'ui-field',
-  'ui-kind',
-  'ui-loading',
-  'ui-modal',
-  'ui-modal-backdrop',
-  'ui-panel-content',
-  'ui-panel-titlebar',
-  'ui-popup',
-  'ui-prevent-scroll-outside',
-  'ui-ripple',
-  'ui-ripple-animation',
-  'ui-table-cell',
-  'ui-table-layout',
-  'ui-table-row'
-];
-
-let uiComponentModules = Object.keys(requirejs.entries)
-  .filter((module) => /^ui-base-theme\/components\/ui-/.test(module));
-
-let uiComponentNames = uiComponentModules
-  .map(m => m.replace(/^ui-base-theme\/components\//, ''))
-  .filter(m => !/--/.test(m));
-
-let componentCustomizations = {
-  'ui-button': {
-    kinds: ['default', 'material', 'primary', 'simple'],
-    states: ['active', 'disabled', 'focus', 'loading']
-  },
-  'ui-checkbox': {
-    states: ['disabled', 'error']
-  },
-  'ui-textarea': {
-    states: ['disabled', 'error']
-  }
-};
-
-Ember.A(uiComponentNames).removeObjects(COMPONENT_BLACKLIST);
-
-let allComponents = uiComponentNames.map((componentName) => {
-  let attrs = { name: componentName, kinds: ['default'], states: [] };
-  let customizations = componentCustomizations[componentName];
-
-  if (customizations) {
-    return Object.assign(attrs, customizations);
-  } else {
-    return attrs;
-  }
-});
-
 export default Ember.Controller.extend({
-  allComponents
+  queryParams: ['filter'],
+
+  filter: [],
+
+  filteredComponents: Ember.computed('filter.[]', 'model.theme.components.[]', function() {
+    let components = this.get('model.theme.components');
+    let filter = this.get('filter');
+
+    if (filter.length > 0) {
+      return components.filter((component) => filter.indexOf(component.name) > -1);
+    } else {
+      return components;
+    }
+  }),
+
+  actions: {
+    toggleComponentFilter(componentName) {
+      let filter = this.get('filter');
+      let newFilter = [].concat(filter);
+      let indexOfComponentName = newFilter.indexOf(componentName);
+
+      if (indexOfComponentName > -1) {
+        newFilter.splice(indexOfComponentName, 1)
+        this.set('filter', newFilter);
+      } else {
+        this.set('filter', newFilter.concat(componentName));
+      }
+    }
+  }
 });
