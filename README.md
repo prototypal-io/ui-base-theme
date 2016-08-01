@@ -1,6 +1,7 @@
 # ui-base-theme
 
-This README outlines the details of collaborating on this Ember addon.
+The base theme for [untitled-ui](https://github.com/prototypal-io/untitled-ui#ui-base-theme)
+upon which custom themes should be built.
 
 ## Installation
 
