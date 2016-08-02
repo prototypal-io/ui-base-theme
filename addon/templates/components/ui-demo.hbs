@@ -13,11 +13,11 @@
         {{/ui-button-group}}
         &nbsp;
         {{#ui-button-group size="x-small" as |group|}}
-          {{#each demoComponent.states as |state|}}
-            {{#group.button active=(get activeStates state) onclick=(action "setState" state)}}
-              {{state}}
+          {{#each-in uiStates as |_ state|}}
+            {{#group.button active=(get activeStates state.name) onclick=(action "setState" state.name)}}
+              {{state.name}}
             {{/group.button}}
-          {{/each}}
+          {{/each-in}}
         {{/ui-button-group}}
       </div>
 
