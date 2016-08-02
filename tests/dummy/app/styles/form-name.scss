@@ -1,0 +1,45 @@
+.form-name {
+  position: relative;
+  border: solid 1px #dce7f0;
+  padding: 0 10px;
+  border-radius: 3px;
+  transition: background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+
+  .form-name--label {
+    position: absolute;
+    top: 0px;
+    line-height: 6em;
+    width: 100%;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-size: 1em;
+    font-weight: bold;
+    color: #abbac5;
+
+    &:hover {
+      color: #0887e9;
+    }
+  }
+
+  .form-name--fields {
+    opacity: 0;
+    display: flex;
+    pointer-events: none;
+  }
+
+  &--active {
+    background: #f6fbfe;
+
+    .form-name--fields {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .form-name--label {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}

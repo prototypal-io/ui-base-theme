@@ -1,22 +1,29 @@
 {{#ui-fieldset as |fs|}}
-  {{#fs.field as |f|}}
-    {{#f.label}}
-      First Name
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+  <div class="form-name {{if fs.states.focus 'form-name--active'}}">
+    <div class="form-name--label" {{action "focusIn"}}>
+      Full Name
+    </div>
+    <div class="form-name--fields">
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          First Name
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
 
-  {{#fs.field as |f|}}
-    {{#f.label}}
-      MI
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          MI
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
 
-  {{#fs.field as |f|}}
-    {{#f.label}}
-      Last Name
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          Last Name
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
+    </div>
+  </div>
 {{/ui-fieldset}}
