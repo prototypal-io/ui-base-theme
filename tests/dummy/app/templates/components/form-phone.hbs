@@ -1,5 +1,7 @@
 {{#ui-field as |f|}}
-  <div class="form-name {{if f.states.focus 'form-name--active'}}">
+  <div class="form-name
+              {{if f.states.focus 'form-name--active'}}
+              {{if (and phone (not f.states.focus)) 'form-name--show-value'}}">
     <div class="form-name--label" {{action "focusIn"}}>
       Phone Number
     </div>
@@ -7,7 +9,7 @@
       {{#f.label}}
         Phone Number
       {{/f.label}}
-      {{f.input value=value}}
+      {{f.input value=phone}}
 
       {{#ui-tooltip as |tooltip|}}
         {{#tooltip.target}}
@@ -17,6 +19,12 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ipsum quis risus finibus, in luctus arcu molestie. Suspendisse tincidunt urna odio, id iaculis nisi cursus gravida.
         {{/tooltip.popup}}
       {{/ui-tooltip}}
+    </div>
+    <div class="form-name--value"  {{action "focusIn"}}>
+      {{#f.label}}
+        Phone Number
+      {{/f.label}}
+      {{phone}}
     </div>
   </div>
 {{/ui-field}}

@@ -1,3 +1,5 @@
 import FormComponent from './form-component';
 
-export default FormComponent.extend();
+export default FormComponent.extend({
+  hasValue: Ember.computed.or('firstName', 'middleName', 'lastName')
+});

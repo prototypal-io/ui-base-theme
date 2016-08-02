@@ -1,5 +1,7 @@
 {{#ui-field as |f|}}
-  <div class="form-name {{if f.states.focus 'form-name--active'}}">
+  <div class="form-name
+              {{if f.states.focus 'form-name--active'}}
+              {{if (and email (not f.states.focus)) 'form-name--show-value'}}">
     <div class="form-name--label" {{action "focusIn"}}>
       Email Address
     </div>
@@ -7,7 +9,7 @@
       {{#f.label}}
         Email Address
       {{/f.label}}
-      {{f.input type="email" value=value}}
+      {{f.input type="email" value=email}}
 
       {{#ui-tooltip as |tooltip|}}
         {{#tooltip.target}}
@@ -17,6 +19,12 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ipsum quis risus finibus, in luctus arcu molestie. Suspendisse tincidunt urna odio, id iaculis nisi cursus gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac <a href="#">turpis egestas</a>.
         {{/tooltip.popup}}
       {{/ui-tooltip}}
+    </div>
+    <div class="form-name--value"  {{action "focusIn"}}>
+      {{#f.label}}
+        Email Address
+      {{/f.label}}
+      {{email}}
     </div>
   </div>
 {{/ui-field}}

@@ -34,6 +34,13 @@
     display: flex;
   }
 
+  .form-name--value {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   &--active {
     background: #f6fbfe;
 
@@ -45,6 +52,18 @@
     .form-name--label {
       opacity: 0;
       pointer-events: none;
+    }
+  }
+
+  &--show-value {
+    .form-name--label {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .form-name--value {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }

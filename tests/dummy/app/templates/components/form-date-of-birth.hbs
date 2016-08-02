@@ -1,5 +1,7 @@
 {{#ui-field as |f|}}
-  <div class="form-name {{if f.states.focus 'form-name--active'}}">
+  <div class="form-name
+    {{if f.states.focus 'form-name--active'}}
+    {{if (and date (not f.states.focus)) 'form-name--show-value'}}">
     <div class="form-name--label" {{action "focusIn"}}>
       Date of Birth
     </div>
@@ -7,7 +9,13 @@
       {{#f.label}}
         Date of Birth
       {{/f.label}}
-      {{f.input value=value}}
+      {{f.input value=date}}
+    </div>
+    <div class="form-name--value"  {{action "focusIn"}}>
+      {{#f.label}}
+        Date of Birth
+      {{/f.label}}
+      {{date}}
     </div>
   </div>
 {{/ui-field}}

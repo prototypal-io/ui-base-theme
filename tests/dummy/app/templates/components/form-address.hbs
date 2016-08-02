@@ -1,5 +1,7 @@
 {{#ui-fieldset as |fs|}}
-  <div class="form-name {{if fs.states.focus 'form-name--active'}}">
+  <div class="form-name
+              {{if fs.states.focus 'form-name--active'}}
+              {{if (and hasValue (not fs.states.focus)) 'form-name--show-value'}}">
     <div class="form-name--label" {{action "focusIn"}}>
       Home Address
     </div>
@@ -8,21 +10,21 @@
         {{#f.label}}
           Home Address
         {{/f.label}}
-        {{f.input type="email" value=value}}
+        {{f.input type="email" value=street}}
       {{/fs.field}}
 
       {{#fs.field as |f|}}
         {{#f.label}}
           Apt Site (Optional)
         {{/f.label}}
-        {{f.input type="email" value=value}}
+        {{f.input type="email" value=suite}}
       {{/fs.field}}
 
       {{#fs.field as |f|}}
         {{#f.label}}
           Zip Code
         {{/f.label}}
-        {{f.input type="email" value=value}}
+        {{f.input type="email" value=zip}}
       {{/fs.field}}
 
       {{#ui-tooltip as |tooltip|}}
@@ -38,14 +40,23 @@
         {{#f.label}}
           City
         {{/f.label}}
-        {{f.input type="email" value=value}}
+        {{f.input type="email" value=city}}
       {{/fs.field}}
 
       {{#fs.field as |f|}}
         {{#f.label}}
           State
         {{/f.label}}
-        {{f.input type="email" value=value}}
+        {{f.input type="email" value=state}}
+      {{/fs.field}}
+    </div>
+    <div class="form-name--value"  {{action "focusIn"}}>
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          Home Address
+        {{/f.label}}
+        {{suite}} {{street}} <br />
+        {{city}} {{state}} {{zip}}
       {{/fs.field}}
     </div>
   </div>
