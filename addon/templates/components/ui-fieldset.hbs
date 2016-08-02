@@ -1,5 +1,11 @@
 {{#component frame
   classes=classes
+  states=states
+  field=(component
+    "ui-field"
+    onFocusIn=(action "onFocusIn")
+    onFocusOut=(action "onFocusOut")
+    size=size)
   size=size as |component|}}
     {{yield component}}
 {{/component}}

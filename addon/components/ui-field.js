@@ -6,7 +6,7 @@ export default UIComponent.extend({
   layout,
 
   type: 'input',
-  active: false,
+  focus: false,
 
   generatedInputId: Ember.computed(function() {
     return `${Ember.guidFor(this)}--input`;
@@ -20,20 +20,28 @@ export default UIComponent.extend({
     return `ui-${this.get('type')}`;
   }),
 
-  states: Ember.computed('disabled', 'active', function() {
+  states: Ember.computed('disabled', 'focus', function() {
     return {
       disabled: this.get('disabled'),
-      active: this.get('active')
+      focus: this.get('focus')
     };
   }),
 
   actions: {
-    focusIn() {
-      this.set('active', true);
+    onFocusIn() {
+      this.set('focus', true);
+
+      if (this.attrs.onFocusIn) {
+        this.attrs.onFocusIn();
+      }
     },
 
-    focusOut() {
-      this.set('active', false);
+    onFocusOut() {
+      this.set('focus', false);
+
+      if (this.attrs.onFocusOut) {
+        this.attrs.onFocusOut();
+      }
     }
   }
 });
