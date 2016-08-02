@@ -1,6 +1,13 @@
 {{#ui-field as |f|}}
-  {{#f.label}}
-    Date of Birth
-  {{/f.label}}
-  {{f.input value=value}}
+  <div class="form-name {{if f.states.focus 'form-name--active'}}">
+    <div class="form-name--label" {{action "focusIn"}}>
+      Date of Birth
+    </div>
+    <div class="form-name--fields">
+      {{#f.label}}
+        Date of Birth
+      {{/f.label}}
+      {{f.input value=value}}
+    </div>
+  </div>
 {{/ui-field}}

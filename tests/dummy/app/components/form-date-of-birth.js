@@ -1,7 +1,7 @@
-import Ember from 'ember';
 import FieldKit from "npm:field-kit";
+import FormComponent from './form-component';
 
-export default Ember.Component.extend({
+export default FormComponent.extend({
   didInsertElement() {
     // TODO Create custom date formatter
     const field = new FieldKit.TextField(this.$().find('input')[0],

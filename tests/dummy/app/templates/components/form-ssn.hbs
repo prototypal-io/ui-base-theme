@@ -1,15 +1,22 @@
 {{#ui-field as |f|}}
-  {{#f.label}}
-    Social Security Number
-  {{/f.label}}
-  {{f.input value=value}}
-{{/ui-field}}
+  <div class="form-name {{if f.states.focus 'form-name--active'}}">
+    <div class="form-name--label" {{action "focusIn"}}>
+      Social Security Number
+    </div>
+    <div class="form-name--fields">
+      {{#f.label}}
+        Social Security Number
+      {{/f.label}}
+      {{f.input value=value}}
 
-{{#ui-tooltip as |tooltip|}}
-  {{#tooltip.target}}
-    (?)
-  {{/tooltip.target}}
-  {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ipsum quis risus finibus, in luctus arcu molestie. Suspendisse tincidunt urna odio, id iaculis nisi cursus gravida.
-  {{/tooltip.popup}}
-{{/ui-tooltip}}
+      {{#ui-tooltip as |tooltip|}}
+        {{#tooltip.target}}
+          (?)
+        {{/tooltip.target}}
+        {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ipsum quis risus finibus, in luctus arcu molestie. Suspendisse tincidunt urna odio, id iaculis nisi cursus gravida.
+        {{/tooltip.popup}}
+      {{/ui-tooltip}}
+    </div>
+  </div>
+{{/ui-field}}

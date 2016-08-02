@@ -1,7 +1,7 @@
-import Ember from 'ember';
 import FieldKit from "npm:field-kit";
+import FormComponent from './form-component';
 
-export default Ember.Component.extend({
+export default FormComponent.extend({
   didInsertElement() {
     const field = new FieldKit.TextField(this.$().find('input')[0],
                     new FieldKit.PhoneFormatter());

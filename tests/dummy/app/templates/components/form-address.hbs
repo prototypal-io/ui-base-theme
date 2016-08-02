@@ -1,45 +1,52 @@
 {{#ui-fieldset as |fs|}}
-  {{#fs.field as |f|}}
-    {{#f.label}}
+  <div class="form-name {{if fs.states.focus 'form-name--active'}}">
+    <div class="form-name--label" {{action "focusIn"}}>
       Home Address
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+    </div>
+    <div class="form-name--fields form-name--fields-flex">
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          Home Address
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
 
-  {{#fs.field as |f|}}
-    {{#f.label}}
-      Apt Site (Optional)
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          Apt Site (Optional)
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
 
-  {{#fs.field as |f|}}
-    {{#f.label}}
-      Zip Code
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          Zip Code
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
 
-  {{#ui-tooltip as |tooltip|}}
-    {{#tooltip.target}}
-      (?)
-    {{/tooltip.target}}
-    {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    {{/tooltip.popup}}
-  {{/ui-tooltip}}
+      {{#ui-tooltip as |tooltip|}}
+        {{#tooltip.target}}
+          (?)
+        {{/tooltip.target}}
+        {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        {{/tooltip.popup}}
+      {{/ui-tooltip}}
 
-  {{#fs.field as |f|}}
-    {{#f.label}}
-      City
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          City
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
 
-  {{#fs.field as |f|}}
-    {{#f.label}}
-      State
-    {{/f.label}}
-    {{f.input type="email" value=value}}
-  {{/fs.field}}
+      {{#fs.field as |f|}}
+        {{#f.label}}
+          State
+        {{/f.label}}
+        {{f.input type="email" value=value}}
+      {{/fs.field}}
+    </div>
+  </div>
 {{/ui-fieldset}}
