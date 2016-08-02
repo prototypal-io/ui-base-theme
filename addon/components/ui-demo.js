@@ -35,6 +35,15 @@ export default Ember.Component.extend({
     }
   }),
 
+  uiStates: Ember.computed(function() {
+    let owner = Ember.getOwner(this);
+    let componentName = this.get('demoComponent.name');
+    let componentClass = owner._lookupFactory(`component:${componentName}`);
+    let uiStates = Ember.get(componentClass, 'uiStates');
+
+    return uiStates;
+  }),
+
   actions: {
     alert(message) {
       alert(message);

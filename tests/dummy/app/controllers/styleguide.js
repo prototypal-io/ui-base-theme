@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
       let indexOfComponentName = newFilter.indexOf(componentName);
 
       if (indexOfComponentName > -1) {
-        newFilter.splice(indexOfComponentName, 1)
+        newFilter.splice(indexOfComponentName, 1);
         this.set('filter', newFilter);
       } else {
         this.set('filter', newFilter.concat(componentName));

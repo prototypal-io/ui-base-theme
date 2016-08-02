@@ -7,6 +7,11 @@ const getDefaultValue = function(component, options) {
 };
 
 export default function state(options = {}) {
+   let meta = {
+    isUIState: true,
+    options: options
+  };
+
   return Ember.computed('_activeUIStates', {
     get(key) {
       return get(this._activeUIStates, key) ||
@@ -23,5 +28,5 @@ export default function state(options = {}) {
 
       return value;
     }
-  });
+  }).meta(meta);
 }

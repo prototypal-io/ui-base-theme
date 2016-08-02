@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-component';
 
-export default Ember.Component.extend({
+const UIComponent = Ember.Component.extend({
   uiTheme: Ember.inject.service(),
 
   layout,
@@ -43,3 +43,20 @@ export default Ember.Component.extend({
     );
   })
 });
+
+UIComponent.reopenClass({
+  uiStates: Ember.computed(function() {
+    let map = {};
+
+    this.eachComputedProperty((name, meta) => {
+      if (meta.isUIState) {
+        meta.name = name;
+        map[name] = meta;
+      }
+    });
+
+    return map;
+  }).readOnly()
+});
+
+export default UIComponent;
