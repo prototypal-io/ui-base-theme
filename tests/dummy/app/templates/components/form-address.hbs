@@ -27,15 +27,6 @@
         {{f.input type="email" value=zip}}
       {{/fs.field}}
 
-      {{#ui-tooltip as |tooltip|}}
-        {{#tooltip.target}}
-          (?)
-        {{/tooltip.target}}
-        {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        {{/tooltip.popup}}
-      {{/ui-tooltip}}
-
       {{#fs.field as |f|}}
         {{#f.label}}
           City
@@ -58,6 +49,18 @@
         {{suite}} {{street}} <br />
         {{city}} {{state}} {{zip}}
       {{/fs.field}}
+    </div>
+    <div class="form-name--tooltip">
+      {{#ui-tooltip as |tooltip|}}
+        {{#tooltip.target}}
+          <div class="form-name--tooltip--target">
+            ?
+          </div>
+        {{/tooltip.target}}
+        {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ipsum quis risus finibus, in luctus arcu molestie. Suspendisse tincidunt urna odio, id iaculis nisi cursus gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac <a href="#">turpis egestas</a>.
+        {{/tooltip.popup}}
+      {{/ui-tooltip}}
     </div>
   </div>
 {{/ui-fieldset}}

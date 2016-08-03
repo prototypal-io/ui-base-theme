@@ -1,7 +1,5 @@
 {{#ui-field as |f|}}
-  <div class="form-name
-              {{if f.states.focus 'form-name--active'}}
-              {{if (and income (not f.states.focus)) 'form-name--show-value'}}">
+  <div class="form-name {{if wasFocused 'form-name--active'}}">
     <div class="form-name--label" {{action "focusIn"}}>
       Total Annual Income
     </div>
@@ -10,21 +8,18 @@
         Total Annual Income
       {{/f.label}}
       {{f.input value=income}}
-
+    </div>
+    <div class="form-name--tooltip">
       {{#ui-tooltip as |tooltip|}}
         {{#tooltip.target}}
-          (?)
+          <div class="form-name--tooltip--target">
+            ?
+          </div>
         {{/tooltip.target}}
         {{#tooltip.popup attachment='middle left' targetAttachment='middle right'}}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ipsum quis risus finibus, in luctus arcu molestie. Suspendisse tincidunt urna odio, id iaculis nisi cursus gravida.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ipsum quis risus finibus, in luctus arcu molestie. Suspendisse tincidunt urna odio, id iaculis nisi cursus gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac <a href="#">turpis egestas</a>.
         {{/tooltip.popup}}
       {{/ui-tooltip}}
-    </div>
-    <div class="form-name--value"  {{action "focusIn"}}>
-      {{#f.label}}
-        Total Annual Income
-      {{/f.label}}
-      {{income}}
     </div>
   </div>
 {{/ui-field}}

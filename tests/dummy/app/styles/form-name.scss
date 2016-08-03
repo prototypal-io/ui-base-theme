@@ -41,6 +41,26 @@
     pointer-events: none;
   }
 
+  .form-name--tooltip {
+    position: absolute;
+    top: 0px;
+    right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &--target {
+      background: #ffdf91;
+      border-radius: 1.5em;
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      line-height: 1.5em;
+      text-align: center;
+      color: #8f6b15;
+    }
+  }
+
   &--active {
     background: #f6fbfe;
 
@@ -60,7 +80,7 @@
       opacity: 0;
       pointer-events: none;
     }
-    
+
     .form-name--value {
       opacity: 1;
       pointer-events: all;
