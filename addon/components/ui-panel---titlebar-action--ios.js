@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import UIKindComponent from './ui-kind';
-import layout from '../templates/components/ui-panel--ios-titlebar-action';
+import layout from '../templates/components/ui-panel---titlebar-action--ios';
 
 export default UIKindComponent.extend({
   layout,
