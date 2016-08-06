@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('panel', function() {
     this.route('inbox');
   });
+  this.route('sidebar');
   this.route('styleguide');
   this.route('work-order');
 });

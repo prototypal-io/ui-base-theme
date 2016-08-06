@@ -1,0 +1,20 @@
+@component(
+  $height: $untitled-ui--menu--default--height,
+  $width: $untitled-ui--menu--default--width,
+  $background: $untitled-ui--menu--default--background,
+  $color: $untitled-ui--menu--default--color,
+  $collapsed-width: $untitled-ui--menu--default--collapsed-width
+) {
+  height: $height;
+  width: $width;
+  background: $background;
+  color: $color;
+
+  &--collapsed {
+    width: $collapsed-width;
+  }
+
+  &--active {
+    background: tomato;
+  }
+}

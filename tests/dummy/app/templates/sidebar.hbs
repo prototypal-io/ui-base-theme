@@ -1,0 +1,80 @@
+<hbox>
+  {{#ui-menu collapsed=isSidebarCollapsed as |menu|}}
+    {{#menu.item "index" as |item|}}
+      {{ui-icon kind="fontawesome" icon="life-ring"}}
+      {{#unless menu.collapsed}}Online Support{{/unless}}
+
+      {{#item.sub-menu as |subMenu|}}
+        {{#subMenu.item "styleguide" as |subMenuItem|}}
+          ICSS
+        {{/subMenu.item}}
+        {{#subMenu.item "styleguide" as |subMenuItem|}}
+          Sub-item
+        {{/subMenu.item}}
+      {{/item.sub-menu}}
+    {{/menu.item}}
+
+    {{#menu.item "index" as |item|}}
+      {{ui-icon kind="fontawesome" icon="usd"}}
+      {{#unless menu.collapsed}}Billing{{/unless}}
+
+      {{#item.sub-menu as |subMenu|}}
+        {{#subMenu.item "styleguide" as |subMenuItem|}}
+          Billing Sub-item
+        {{/subMenu.item}}
+        {{#subMenu.item "styleguide" as |subMenuItem|}}
+          Billing Sub-item
+        {{/subMenu.item}}
+      {{/item.sub-menu}}
+    {{/menu.item}}
+
+    {{#menu.item "index" as |item|}}
+      {{ui-icon kind="fontawesome" icon="pencil"}}
+      {{#unless menu.collapsed}}Claims{{/unless}}
+    {{/menu.item}}
+
+    {{#menu.item "index" as |item|}}
+      {{ui-icon kind="fontawesome" icon="folder-open"}}
+      {{#unless menu.collapsed}}Reference{{/unless}}
+    {{/menu.item}}
+  {{/ui-menu}}
+
+  <box>
+    {{#ui-button onclick=(action "toggleSidebar")}}
+      Toggle Sidebar
+    {{/ui-button}}
+
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+    Content
+  </box>
+</hbox>

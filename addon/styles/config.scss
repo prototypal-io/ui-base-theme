@@ -173,3 +173,16 @@ $untitled-ui--table--default-row--padding: 0.4em 0;
 $untitled-ui--table--default-row--font: $untitled-ui--copy-font;
 $untitled-ui--table--default-row--hover-background: inherit;
 $untitled-ui--table--default-row-cell--padding: 0 0.2em;
+
+$untitled-ui--menu--default--background: #222;
+$untitled-ui--menu--default--color: #FFFFFF;
+$untitled-ui--menu--default--height: 100vh;
+$untitled-ui--menu--default--width: 10em;
+$untitled-ui--menu--default--collapsed-width: 3em;
+
+$untitled-ui--menu---item--default--background: #222;
+$untitled-ui--menu---item--default--color: #FFFFFF;
+$untitled-ui--menu---item--default--font: $untitled-ui--copy-font;
+$untitled-ui--menu---item--default--padding: 1em 0.5em;
+$untitled-ui--menu---item--default--text-decoration: none;
+$untitled-ui--menu---item--default--hover-background: lighten($untitled-ui--menu---item--default--background, 50%);

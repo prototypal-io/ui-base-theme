@@ -1,0 +1,22 @@
+@component(
+  $background: $untitled-ui--menu---item--default--background,
+  $color: $untitled-ui--menu---item--default--color,
+  $font: $untitled-ui--menu---item--default--font,
+  $padding: $untitled-ui--menu---item--default--padding,
+  $text-decoration: $untitled-ui--menu---item--default--text-decoration,
+  $hover-background: $untitled-ui--menu---item--default--hover-background
+) {
+  display: block;
+  padding: $padding;
+  font-family: $font;
+  color: $color;
+  text-decoration: $text-decoration;
+
+  &--collapsed {
+    text-align: center;
+  }
+
+  &--hover {
+    background: $hover-background;
+  }
+}

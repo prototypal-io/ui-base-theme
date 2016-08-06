@@ -1,0 +1,23 @@
+{{#link-to targetRouteName
+  id=generatedId
+  class=(-ui-component-class
+    (concat
+      ":component "
+      classes.class " "
+      classes.size " "
+      (ui-state states "collapsed" "hover")
+    )
+    prefix="ui-menu---item--default"
+  )
+  mouseEnter=(action action.mouseEnter)
+  mouseLeave=(action action.mouseLeave)
+}}
+  {{yield (hash
+    sub-menu=(component "ui-menu"
+      collapsed=(not states.active)
+      kind="sub-menu"
+      targetId=(concat "#" generatedId)
+      registerWithMenuItem=(action action.registerSubMenu)
+    )
+  )}}
+{{/link-to}}

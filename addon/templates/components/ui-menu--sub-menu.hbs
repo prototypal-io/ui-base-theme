@@ -1,0 +1,19 @@
+{{#unless states.collapsed}}
+  {{#ember-tether
+    target=targetId
+    attachment="top left"
+    targetAttachment="top right"
+  }}
+    <nav class=":component {{classes.class}} {{classes.size}} {{ui-state states 'active' 'collapsed'}}">
+      {{yield (hash
+        collapsed=states.collapsed
+        item=(component "ui-menu---item"
+          collapsed=states.collapsed
+          kind="sub-menu"
+          menu=this
+          registerWithMenu=(action action.registerMenuItem)
+        )
+      )}}
+    </nav>
+  {{/ember-tether}}
+{{/unless}}

@@ -1,0 +1,11 @@
+{{#component frame
+  action=(hash
+    registerMenuItem=(action "registerMenuItem")
+  )
+  classes=classes
+  targetId=targetId
+  kind=kind
+  size=size
+  states=states as |component|}}
+    {{yield component}}
+{{/component}}

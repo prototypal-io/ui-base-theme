@@ -1,0 +1,7 @@
+@import "./ui-menu--default";
+
+@component() {
+  @include ui-menu--default($height: auto);
+
+  padding: 0.5em;
+}

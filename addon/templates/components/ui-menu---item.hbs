@@ -1,0 +1,14 @@
+{{#component frame
+  action=(hash
+    mouseEnter=(perform mouseEnter)
+    mouseLeave=(perform mouseLeave)
+    registerSubMenu=(action "registerSubMenu")
+  )
+  classes=classes
+  generatedId=generatedId
+  kind=kind
+  size=size
+  states=states
+  targetRouteName=targetRouteName as |component|}}
+    {{yield component}}
+{{/component}}

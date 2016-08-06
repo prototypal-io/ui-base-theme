@@ -1,0 +1,19 @@
+@import './ui-menu---item--sub-menu';
+
+@component() {
+  @include ui-menu---item--sub-menu();
+
+  // display: block;
+  // padding: $padding;
+  // font-family: $font;
+  // color: $color;
+  // text-decoration: $text-decoration;
+  //
+  // &--collapsed {
+  //   text-align: center;
+  // }
+  //
+  // &--hover {
+  //   background: $hover-background;
+  // }
+}
