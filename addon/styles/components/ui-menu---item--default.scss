@@ -6,17 +6,17 @@
   $text-decoration: $untitled-ui--menu---item--default--text-decoration,
   $hover-background: $untitled-ui--menu---item--default--hover-background
 ) {
-  display: block;
-  padding: $padding;
-  font-family: $font;
-  color: $color;
-  text-decoration: $text-decoration;
+  position: relative;
 
-  &--collapsed {
-    text-align: center;
-  }
+  &--link-to {
+    display: block;
+    padding: $padding;
+    font-family: $font;
+    color: $color;
+    text-decoration: $text-decoration;
 
-  &--hover {
-    background: $hover-background;
+    &:hover {
+      background: $hover-background;
+    }
   }
 }

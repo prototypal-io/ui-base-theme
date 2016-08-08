@@ -3,17 +3,17 @@
 @component() {
   @include ui-menu---item--default();
 
-  // display: block;
-  // padding: $padding;
-  // font-family: $font;
-  // color: $color;
-  // text-decoration: $text-decoration;
-  //
-  // &--collapsed {
-  //   text-align: center;
-  // }
-  //
-  // &--hover {
-  //   background: $hover-background;
-  // }
+  padding: 0 1em;
+
+  &:first-child {
+    padding-top: 1em;
+  }
+
+  &:last-child {
+    padding-bottom: 1em;
+  }
+
+  &--link-to {
+    border-radius: 4px;
+  }
 }

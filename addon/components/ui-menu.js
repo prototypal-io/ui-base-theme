@@ -8,33 +8,13 @@ const { computed } = Ember;
 export default UIComponent.extend({
   layout,
 
+  active: state({ defaultValue: false }),
   collapsed: state({ defaultValue: false }),
-
-  activeMenuItems: Ember.computed.filterBy('menuItems', 'activeOrSubMenuActive', true),
-  active: Ember.computed.notEmpty('activeMenuItems'),
-
-  init() {
-    this._super(...arguments);
-
-    this.menuItems = Ember.A([]);
-
-    if (this.attrs.registerWithMenuItem) {
-      // Ember.run.schedule('afterRender', () => {
-        this.attrs.registerWithMenuItem(this);
-      // });
-    }
-  },
 
   states: Ember.computed('active', 'collapsed', function() {
     return {
       active: this.get('active'),
       collapsed: this.get('collapsed')
     };
-  }),
-
-  actions: {
-    registerMenuItem(menuItem) {
-      this.get('menuItems').pushObject(menuItem);
-    }
-  }
+  })
 });

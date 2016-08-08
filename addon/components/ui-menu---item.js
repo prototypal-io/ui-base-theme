@@ -11,8 +11,6 @@ const {
   set
 } = Ember;
 
-const { or } = computed;
-
 const UIMenuItem = UIComponent.extend({
   layout,
 
@@ -20,22 +18,7 @@ const UIMenuItem = UIComponent.extend({
   collapsed: state({ defaultValue: false }),
   hover: state({ defaultValue: false }),
 
-  activeOrSubMenuActive: or('active', 'subMenu.active'),
-
-  menu: null,
-  subMenu: null,
   targetRouteName: null,
-
-
-  init() {
-    this._super(...arguments);
-
-    if (this.attrs.registerWithMenu) {
-      // Ember.run.schedule('afterRender', () => {
-        this.attrs.registerWithMenu(this);
-      // });
-    }
-  },
 
   generatedId: computed(function() {
     return `ui-menu---item--${guidFor(this)}`;
@@ -49,24 +32,18 @@ const UIMenuItem = UIComponent.extend({
   mouseLeave: task(function * () {
     set(this, 'hover', false);
 
-    yield timeout(1000);
+    yield timeout(100);
 
     set(this, 'active', false);
   }),
 
-  states: computed('activeOrSubMenuActive', 'collapsed', 'hover', function() {
+  states: computed('active', 'collapsed', 'hover', function() {
     return {
-      active: this.get('activeOrSubMenuActive'),
-      collapsed: get(this, 'collapsed'),
+      active: this.get('active'),
+      collapsed: this.get('collapsed'),
       hover: get(this, 'hover')
     };
-  }),
-
-  actions: {
-    registerSubMenu(subMenu) {
-      set(this, 'subMenu', subMenu);
-    }
-  }
+  })
 });
 
 UIMenuItem.reopenClass({

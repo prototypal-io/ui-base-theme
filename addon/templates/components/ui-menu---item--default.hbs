@@ -1,23 +1,25 @@
-{{#link-to "index"
-  id=generatedId
-  class=(-ui-component-class
-    (concat
-      ":component "
-      classes.class " "
-      classes.size " "
-      (ui-state states "collapsed" "hover")
-    )
-    prefix="ui-menu---item--default"
-  )
-  mouseEnter=(action action.mouseEnter)
-  mouseLeave=(action action.mouseLeave)
-}}
+<div
+  id={{generatedId}}
+  class=":component {{classes.class}} {{classes.size}} {{ui-state states 'collapsed' 'hover'}}"
+  onmouseenter={{action action.mouseEnter}}
+  onmouseleave={{action action.mouseLeave}}
+>
   {{yield (hash
+    link-to=(component "link-to"
+      class=(-ui-component-class
+        (concat
+          ":component "
+          classes.class " "
+          classes.size " "
+          (ui-state states "collapsed" "hover")
+        )
+        prefix=(concat "ui-menu---item--" kind "--link-to")
+      )
+    )
     sub-menu=(component "ui-menu"
-      collapsed=(not states.active)
+      active=states.active
       kind="sub-menu"
       targetId=(concat "#" generatedId)
-      registerWithMenuItem=(action action.registerSubMenu)
     )
   )}}
-{{/link-to}}
+</div>

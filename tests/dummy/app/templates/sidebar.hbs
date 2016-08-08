@@ -1,49 +1,69 @@
 <hbox>
   {{#ui-menu collapsed=isSidebarCollapsed as |menu|}}
     {{#menu.item "index" as |item|}}
-      {{ui-icon kind="fontawesome" icon="life-ring"}}
-      {{#unless menu.collapsed}}Online Support{{/unless}}
+      {{#item.link-to}}
+        {{ui-icon kind="fontawesome" icon="life-ring"}}
+        {{#unless menu.collapsed}}Online Support{{/unless}}
+      {{/item.link-to}}
 
       {{#item.sub-menu as |subMenu|}}
-        {{#subMenu.item "styleguide" as |subMenuItem|}}
-          ICSS
-
+        {{#subMenu.item as |subMenuItem|}}
+          {{#subMenuItem.link-to}}ICSS{{/subMenuItem.link-to}}
         {{/subMenu.item}}
 
-        {{#subMenu.item "styleguide" as |subMenuItem|}}
-          Sub-item
+        {{#subMenu.item as |subMenuItem|}}
+          {{#subMenuItem.link-to}}
+            Apple
+          {{/subMenuItem.link-to}}
 
-          {{#item.sub-menu as |subMenu|}}
-            {{#subMenu.item "styleguide" as |subMenuItem|}}
-                Something
+          {{#subMenuItem.sub-menu as |subMenu|}}
+            {{#subMenu.item as |subSubMenuItem|}}
+              {{#subSubMenuItem.link-to}}
+                Apple
+              {{/subSubMenuItem.link-to}}
             {{/subMenu.item}}
-          {{/item.sub-menu}}
+            {{#subMenu.item as |subSubMenuItem|}}
+              {{#subSubMenuItem.link-to}}
+                Apple
+              {{/subSubMenuItem.link-to}}
+            {{/subMenu.item}}
+          {{/subMenuItem.sub-menu}}
         {{/subMenu.item}}
       {{/item.sub-menu}}
     {{/menu.item}}
 
-    {{#menu.item "index" as |item|}}
-      {{ui-icon kind="fontawesome" icon="usd"}}
-      {{#unless menu.collapsed}}Billing{{/unless}}
+    {{#menu.item as |item|}}
+      {{#item.link-to "index"}}
+        {{ui-icon kind="fontawesome" icon="usd"}}
+        {{#unless menu.collapsed}}Billing{{/unless}}
+      {{/item.link-to}}
 
       {{#item.sub-menu as |subMenu|}}
-        {{#subMenu.item "styleguide" as |subMenuItem|}}
-          Billing Sub-item
+        {{#subMenu.item as |subMenuItem|}}
+          {{#subMenuItem.link-to "index"}}
+            Billing Sub-item
+          {{/subMenuItem.link-to}}
         {{/subMenu.item}}
-        {{#subMenu.item "styleguide" as |subMenuItem|}}
-          Billing Sub-item
+        {{#subMenu.item as |subMenuItem|}}
+          {{#subMenuItem.link-to "index"}}
+            Billing Sub-item
+          {{/subMenuItem.link-to}}
         {{/subMenu.item}}
       {{/item.sub-menu}}
     {{/menu.item}}
 
-    {{#menu.item "index" as |item|}}
-      {{ui-icon kind="fontawesome" icon="pencil"}}
-      {{#unless menu.collapsed}}Claims{{/unless}}
+    {{#menu.item as |item|}}
+      {{#item.link-to}}
+        {{ui-icon kind="fontawesome" icon="pencil"}}
+        {{#unless menu.collapsed}}Claims{{/unless}}
+      {{/item.link-to}}
     {{/menu.item}}
 
-    {{#menu.item "index" as |item|}}
-      {{ui-icon kind="fontawesome" icon="folder-open"}}
-      {{#unless menu.collapsed}}Reference{{/unless}}
+    {{#menu.item as |item|}}
+      {{#item.link-to}}
+        {{ui-icon kind="fontawesome" icon="folder-open"}}
+        {{#unless menu.collapsed}}Reference{{/unless}}
+      {{/item.link-to}}
     {{/menu.item}}
   {{/ui-menu}}
 

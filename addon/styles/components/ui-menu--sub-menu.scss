@@ -1,7 +1,10 @@
 @import "./ui-menu--default";
 
 @component() {
-  @include ui-menu--default($height: auto);
+  @include ui-menu--default($height: auto, $width: 170px, $collapsed-width: 100%);
 
-  padding: 0.5em;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
