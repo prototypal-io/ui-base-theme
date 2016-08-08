@@ -1,1 +1,1 @@
-export { default } from 'ui-base-theme/components/ui-menu---item';
+export { default } from "ui-base-theme/components/ui-menu---item--sub-menu";

@@ -10,7 +10,7 @@ export default UIComponent.extend({
 
   collapsed: state({ defaultValue: false }),
 
-  activeMenuItems: Ember.computed.filterBy('menuItems', 'active', true),
+  activeMenuItems: Ember.computed.filterBy('menuItems', 'activeOrSubMenuActive', true),
   active: Ember.computed.notEmpty('activeMenuItems'),
 
   init() {
@@ -19,9 +19,9 @@ export default UIComponent.extend({
     this.menuItems = Ember.A([]);
 
     if (this.attrs.registerWithMenuItem) {
-      Ember.run.next(this, () => {
+      // Ember.run.schedule('afterRender', () => {
         this.attrs.registerWithMenuItem(this);
-      });
+      // });
     }
   },
 

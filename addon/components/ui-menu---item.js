@@ -31,9 +31,9 @@ const UIMenuItem = UIComponent.extend({
     this._super(...arguments);
 
     if (this.attrs.registerWithMenu) {
-      Ember.run.next(this, () => {
+      // Ember.run.schedule('afterRender', () => {
         this.attrs.registerWithMenu(this);
-      });
+      // });
     }
   },
 
@@ -49,16 +49,14 @@ const UIMenuItem = UIComponent.extend({
   mouseLeave: task(function * () {
     set(this, 'hover', false);
 
-    yield timeout(100);
+    yield timeout(1000);
 
     set(this, 'active', false);
   }),
 
   states: computed('activeOrSubMenuActive', 'collapsed', 'hover', function() {
-    let derp = this.get('activeOrSubMenuActive');
-    console.log('wat', derp, ' Active: ', this.get('active'), ' Subactive: ', this.get('subMenu.active'));
     return {
-      active: derp,
+      active: this.get('activeOrSubMenuActive'),
       collapsed: get(this, 'collapsed'),
       hover: get(this, 'hover')
     };

@@ -1,7 +1,7 @@
-@import './ui-menu---item--sub-menu';
+@import './ui-menu---item--default';
 
 @component() {
-  @include ui-menu---item--sub-menu();
+  @include ui-menu---item--default();
 
   // display: block;
   // padding: $padding;

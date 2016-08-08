@@ -7,9 +7,17 @@
       {{#item.sub-menu as |subMenu|}}
         {{#subMenu.item "styleguide" as |subMenuItem|}}
           ICSS
+
         {{/subMenu.item}}
+
         {{#subMenu.item "styleguide" as |subMenuItem|}}
           Sub-item
+
+          {{#item.sub-menu as |subMenu|}}
+            {{#subMenu.item "styleguide" as |subMenuItem|}}
+                Something
+            {{/subMenu.item}}
+          {{/item.sub-menu}}
         {{/subMenu.item}}
       {{/item.sub-menu}}
     {{/menu.item}}
