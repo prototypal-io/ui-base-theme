@@ -1,24 +1,27 @@
+import Ember from 'ember';
 import UIComponent from './ui-component';
 import layout from '../templates/components/ui-fieldset';
+
+const { get, set, computed } = Ember;
 
 export default UIComponent.extend({
   layout,
 
   focus: false,
 
-  states: Ember.computed('focus', function() {
+  states: computed('focus', function() {
     return {
-      focus: this.get('focus')
+      focus: get(this, 'focus')
     };
   }),
 
   actions: {
     onFocusIn() {
-      this.set('focus', true);
+      set(this, 'focus', true);
     },
 
     onFocusOut() {
-      this.set('focus', false);
+      set(this, 'focus', false);
     }
   }
 });
