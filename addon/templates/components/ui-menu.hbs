@@ -1,0 +1,11 @@
+<ul class="ui-menu {{concat 'ui-menu--' kind}}
+  {{if collapsed (concat 'ui-menu--' kind '--collapsed')}}
+">
+  {{yield (hash
+    item=(component "ui-menu---item"
+      collapsed=collapsed
+      kind=kind
+    )
+    items=menu.items
+  )}}
+</ul>

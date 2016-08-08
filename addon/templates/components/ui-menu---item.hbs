@@ -1,0 +1,34 @@
+<li class="ui-menu---item {{concat 'ui-menu---item--' kind}}
+  {{if collapsed (concat 'ui-menu---item--' kind '--collapsed')}}
+">
+  {{#link-to item.targetRouteName
+    class=(concat
+      "ui-menu---item--link "
+      (if kind (concat 'ui-menu---item--link--' kind))
+    )
+  }}
+    {{#if item.icon}}
+      <div class="ui-menu---item--icon">
+        {{ui-icon kind="fontawesome" icon=item.icon class="derp"}}
+      </div>
+    {{/if}}
+
+    {{#unless collapsed}}
+      {{item.label}}
+
+      {{#if item.menu}}
+        <div class="ui-menu---item--arrow">
+          {{ui-icon kind="fontawesome" icon="angle-left"}}
+        </div>
+      {{/if}}
+    {{/unless}}
+  {{/link-to}}
+
+  {{#if item.menu}}
+    {{#ui-menu menu=item.menu kind="sub-menu" as |subMenu|}}
+      {{#each subMenu.items as |item|}}
+        {{subMenu.item item=item}}
+      {{/each}}
+    {{/ui-menu}}
+  {{/if}}
+</li>

@@ -6,3 +6,99 @@ html {
 
 @import './config';
 @import './ui-type-scale';
+
+$untitled-ui--menu--default--background: #222;
+$untitled-ui--menu--default--color: #FFFFFF;
+$untitled-ui--menu--default--height: 100vh;
+$untitled-ui--menu--default--width: 10em;
+$untitled-ui--menu--default--collapsed-width: 3em;
+
+$untitled-ui--menu---item--default--background: #222;
+$untitled-ui--menu---item--default--color: #FFFFFF;
+$untitled-ui--menu---item--default--font: $untitled-ui--copy-font;
+$untitled-ui--menu---item--default--padding: 1em 0.5em;
+$untitled-ui--menu---item--default--text-decoration: none;
+$untitled-ui--menu---item--default--hover-background: lighten($untitled-ui--menu---item--default--background, 35%);
+
+.ui-menu {
+  margin: 0;
+  padding: 0;
+  background: $untitled-ui--menu--default--background;
+  list-style-type: none;
+  font-family: $untitled-ui--copy-font;
+}
+
+.ui-menu--default {
+  height: 100vh;
+  padding-top: 7em;
+}
+
+.ui-menu--sub-menu {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 130px;
+}
+
+.ui-menu---item {
+  position: relative;
+
+  &:hover {
+    > .ui-menu--sub-menu {
+      display: block;
+    }
+  }
+}
+
+.ui-menu---item--default {
+  padding: 0 0.5em;
+  width: 14em;
+}
+
+.ui-menu---item--default--collapsed {
+  width: auto;
+  padding: 0;
+
+  > a {
+    padding: 1em;
+    text-align: center;
+  }
+}
+
+.ui-menu---item--sub-menu {
+  padding: 0 0.5em;
+
+  &:first-child {
+    padding-top: 0.5em;
+  }
+
+  &:last-child {
+    padding-bottom: 0.5em;
+  }
+}
+
+.ui-menu---item--link {
+  display: block;
+  padding: $untitled-ui--menu---item--default--padding;
+  color: $untitled-ui--menu---item--default--color;
+  text-decoration: $untitled-ui--menu---item--default--text-decoration;
+
+  &:hover {
+    background: $untitled-ui--menu---item--default--hover-background;
+  }
+}
+
+.ui-menu---item--link--sub-menu {
+  border-radius: 5px;
+}
+
+.ui-menu---item--arrow {
+  float: right;
+}
+
+.ui-menu---item--icon {
+  display: inline-block;
+  width: 20px;
+}
