@@ -7,12 +7,17 @@
   $disabled-background: $untitled-ui--textarea--default--disabled-background,
   $error-color: $untitled-ui--textarea--default--error-color,
   $focus-color: $untitled-ui--textarea--default--focus-color,
-  $font: $untitled-ui--textarea--default--font
+  $font: $untitled-ui--textarea--default--font,
+  $padding-x: $untitled-ui--textarea--default--padding-x,
+  $padding-y: $untitled-ui--textarea--default--padding-y
 ) {
   border-radius: $border-radius;
-  padding: 1px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.12) 100%);
   font-family: $font;
+
+  @if border-color != transparent {
+    padding: 1px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.12) 100%);
+  }
 
   &--wrapper {
     background: $background;
@@ -28,27 +33,38 @@
     font-size: inherit;
     font-family: inherit;
     width: 100%;
-    padding: 0.5em 0.4em; /* TODO: Make sizes match buttons */
+    padding: $padding-y $padding-x; /* TODO: Make sizes match buttons */
     color: $color;
     background: transparent;
 
     &:focus {
       outline: none;
-      margin: -1px;
-      width: calc(100% + 2px);
-      height: calc(100% + 2px);
-      border: solid 1px lighten($focus-color, 20%);
-      box-shadow: 0px 0px 4px $focus-color, inset 0px 2px 3px rgba(0, 0, 0, 0.1);
-      animation: ui-textarea--default--focus-highlight 0.2s 1;
+
+      @if $focus-color != none {
+        box-shadow: 0px 0px 4px $focus-color, inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+        animation: ui-textarea--default--focus-highlight 0.2s 1;
+
+        @if $border-color != transparent {
+          margin: -1px;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          border: solid 1px lighten($focus-color, 20%);
+        }
+      }
     }
 
-    &--error {
-      margin: -1px;
-      width: calc(100% + 2px);
-      height: calc(100% + 2px);
-      border: solid 1px lighten($error-color, 20%);
-      box-shadow: 0px 0px 4px $error-color, inset 0px 2px 3px rgba(0, 0, 0, 0.1);
-      animation: ui-textarea--default--error-highlight 0.2s 1;
+    @if $error-color != none {
+      &--error {
+        box-shadow: 0px 0px 4px $error-color, inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+        animation: ui-textarea--default--error-highlight 0.2s 1;
+
+        @if $border-color != transparent {
+          margin: -1px;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          border: solid 1px lighten($error-color, 20%);
+        }
+      }
     }
 
     &--disabled {
@@ -59,32 +75,36 @@
 
   @at-root {
     /* Focus Glow */
-    @keyframes ui-textarea--default--focus-highlight {
-      0% {
-        box-shadow:
-          0px 0px 0px $focus-color,
-          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
-      }
-      100% {
-        border-color: lighten($focus-color, 20%);
-        box-shadow:
-          0px 0px 4px $focus-color,
-          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+    @if $focus-color != none {
+      @keyframes ui-textarea--default--focus-highlight {
+        0% {
+          box-shadow:
+            0px 0px 0px $focus-color,
+            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+        100% {
+          border-color: lighten($focus-color, 20%);
+          box-shadow:
+            0px 0px 4px $focus-color,
+            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+        }
       }
     }
 
     /* Error Glow */
-    @keyframes ui-textarea--default--error-highlight {
-      0% {
-        box-shadow:
-          0px 0px 0px $error-color,
-          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
-      }
-      100% {
-        border-color: lighten($error-color, 20%);
-        box-shadow:
-          0px 0px 4px #ff0000,
-          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+    @if $error-color != none {
+      @keyframes ui-textarea--default--error-highlight {
+        0% {
+          box-shadow:
+            0px 0px 0px $error-color,
+            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+        100% {
+          border-color: lighten($error-color, 20%);
+          box-shadow:
+            0px 0px 4px #ff0000,
+            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+        }
       }
     }
   }
