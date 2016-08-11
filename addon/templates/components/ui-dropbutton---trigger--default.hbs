@@ -13,9 +13,8 @@
       active=states.active}}
         {{ui-icon
           icon="dropbutton"
-          class=(concat "ui-dropbutton-trigger--icon "
-            (ui-state states 'disabled' el='ui-dropbutton-trigger--icon')
-          )
+          class=(concat uiPrefix "--icon "
+                        (ui-state states 'disabled' el=(concat uiPrefix '--icon')))
         }}
     {{/group.button}}
   {{/ui-button-group}}
@@ -31,9 +30,8 @@
       {{yield}}
       {{ui-icon
         icon="dropbutton"
-        class=(concat "ui-dropbutton-trigger--icon "
-          (ui-state states 'disabled' el='ui-dropbutton-trigger--icon')
-        )
+        class=(concat uiPrefix "--icon "
+                      (ui-state states 'disabled' el=(concat uiPrefix '--icon')))
       }}
   {{/ui-button}}
 {{/if}}
