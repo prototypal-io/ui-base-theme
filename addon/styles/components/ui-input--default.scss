@@ -71,44 +71,42 @@
     }
   }
 
-  @at-root {
-    /* Focus Glow */
-    @if $focus-color != none {
-      @keyframes ui-input--default--focus-highlight {
-        0% {
-          box-shadow:
-            0px 0px 0px $focus-color,
-            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+  /* Focus Glow */
+  @if $focus-color != none {
+    @keyframes ui-input--default--focus-highlight {
+      0% {
+        box-shadow:
+          0px 0px 0px $focus-color,
+          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+      }
+      100% {
+        @if $border-color != transparent {
+          border-color: lighten($focus-color, 20%);
         }
-        100% {
-          @if $border-color != transparent {
-            border-color: lighten($focus-color, 20%);
-          }
 
-          box-shadow:
-            0px 0px 4px $focus-color,
-            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
-        }
+        box-shadow:
+          0px 0px 4px $focus-color,
+          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
       }
     }
+  }
 
-    /* Error Glow */
-    @if $error-color != none {
-      @keyframes ui-input--default--error-highlight {
-        0% {
-          box-shadow:
-            0px 0px 0px $error-color,
-            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+  /* Error Glow */
+  @if $error-color != none {
+    @keyframes ui-input--default--error-highlight {
+      0% {
+        box-shadow:
+          0px 0px 0px $error-color,
+          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+      }
+      100% {
+        @if $border-color != transparent {
+          border-color: lighten($error-color, 20%);
         }
-        100% {
-          @if $border-color != transparent {
-            border-color: lighten($error-color, 20%);
-          }
 
-          box-shadow:
-            0px 0px 4px #ff0000,
-            inset 0px 2px 3px rgba(0, 0, 0, 0.1);
-        }
+        box-shadow:
+          0px 0px 4px #ff0000,
+          inset 0px 2px 3px rgba(0, 0, 0, 0.1);
       }
     }
   }

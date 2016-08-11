@@ -33,12 +33,10 @@
     }
   }
 
-  @at-root {
-    @-webkit-keyframes ui-loading--default {
-      0%   { opacity: 0.4; }
-      20%  { opacity: 0.4; }
-      50%  { opacity: 1.0; }
-      100% { opacity: 0.4; }
-    }
+  @keyframes ui-loading--default {
+    0%   { opacity: 0.4; }
+    20%  { opacity: 0.4; }
+    50%  { opacity: 1.0; }
+    100% { opacity: 0.4; }
   }
 }
