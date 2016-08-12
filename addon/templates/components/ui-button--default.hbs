@@ -1,10 +1,7 @@
-<button
+<button {{ui-root}}
   {{action action.onclick}}
   disabled={{isDisabled}}
-  class=":component
-         {{classes.size}}
-         {{classes.class}}
-         {{ui-state states 'active' 'focus' 'disabled' 'loading'}}
+  class="{{ui-state states 'active' 'focus' 'disabled' 'loading'}}
          {{if group 'group-button'}}
          {{if group.isFirstChild 'first-child'}}
          {{if group.isLastChild 'last-child'}}"

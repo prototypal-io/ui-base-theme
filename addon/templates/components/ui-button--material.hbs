@@ -1,10 +1,8 @@
 {{#ui-ripple as |ripple|}}
-  <button
+  <button {{ui-root}}
     {{action action.onclick}}
     disabled={{isDisabled}}
-    class=":component
-           {{classes.size}}
-           {{ui-state states 'active' 'focus' 'disabled' 'loading'}}">
+    class="{{ui-state states 'active' 'focus' 'disabled' 'loading'}}">
       <div class="label">
         {{yield}}
       </div>
