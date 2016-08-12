@@ -1,3 +1,5 @@
-<div class=":component">
-  {{yield (hash page=(component "link-to" class="ui-pagination---pages--default---page"))}}
+<div {{ui-root}}>
+  {{yield (hash
+    page=(component "link-to" class="ui-pagination---pages--default---page"))
+  }}
 </div>

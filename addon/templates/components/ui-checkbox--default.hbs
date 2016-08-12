@@ -1,8 +1,6 @@
-<label class=":component
-              {{classes.size}}
-              {{classes.class}}
-              {{unless states.disabled 'enabled'}}
-              {{ui-state states 'disabled' 'checked' 'error'}}">
+<label {{ui-root}}
+  class="{{unless states.disabled 'enabled'}}
+         {{ui-state states 'disabled' 'checked' 'error'}}">
   {{input
     class="ui-checkbox--default--input"
     type="checkbox"

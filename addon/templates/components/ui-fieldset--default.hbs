@@ -1,9 +1,6 @@
-<div class=":component
-            {{classes.size}}
-            {{classes.class}}
-            {{ui-state states 'focus'}}">
+<div {{ui-root}} class="{{ui-state states 'focus'}}">
   {{yield (hash
     field=field
     states=states
-    )}}
+  )}}
 </div>
