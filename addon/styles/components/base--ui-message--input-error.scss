@@ -1,15 +1,15 @@
 @import './base--ui-message--default';
 
 @component() {
-  @include base--ui-message--default(
-    $radius: $untitled-ui--message--error--radius,
-    $color: $untitled-ui--message--error--color,
-    $background: $untitled-ui--message--error--background,
-    $border-color: $untitled-ui--message--error--border-color,
-    $border-width: $untitled-ui--message--error--border-width,
-    $padding: $untitled-ui--message--error--padding,
-    $box-shadow: $untitled-ui--message--error--box-shadow,
-    $font: $untitled-ui--message--error--font
+  @include base--ui-message--default($theme,
+    $radius: ^border-radius,
+    $color: ^default-color,
+    $background: linear-gradient(to bottom, white 0%, #f3f3f3 100%),
+    $border-color: #c5c5c5,
+    $border-width: 1px,
+    $padding: 0.3em,
+    $box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2),
+    $font: ^copy-font
   );
 
   z-index: 10;

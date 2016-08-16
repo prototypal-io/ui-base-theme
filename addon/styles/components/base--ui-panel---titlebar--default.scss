@@ -1,6 +1,6 @@
 @component(
-  $font: $untitled-ui--panel--default-titlebar--font,
-  $border-color: $untitled-ui--panel--default-titlebar--border-color
+  $font: ^heading-font,
+  $border-color: darken(^page-background, 6%)
 ) {
   padding: 0.5em 0.8em;
   font-size: 1.25em;

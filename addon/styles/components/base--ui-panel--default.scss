@@ -1,10 +1,10 @@
 @component(
-  $border-radius: $untitled-ui--panel--default--radius,
-  $border-color: $untitled-ui--panel--default--border-color,
-  $border-size: $untitled-ui--panel--default--border-size,
-  $background: $untitled-ui--panel--default--background,
-  $box-shadow: $untitled-ui--panel--default--box-shadow,
-  $color: $untitled-ui--panel--default--color
+  $border-radius: ^border-radius,
+  $border-color: darken(^page-background, 15%),
+  $border-size: 1px,
+  $background: ^content-background,
+  $box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05),
+  $color: ^font-color
 ) {
   display: flex;
   border-radius: $border-radius;
