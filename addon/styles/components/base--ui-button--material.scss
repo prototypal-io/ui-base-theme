@@ -2,8 +2,8 @@
 @import './ui-button--base';
 
 @component() {
-  @include ui-button();
-  @include ui-button--base();
+  @include ui-button($theme);
+  @include ui-button--base($theme);
 
   letter-spacing: .010em;
   border-radius: 3px;

@@ -3,9 +3,9 @@
 @import './base--ui-button--default';
 
 @component() {
-  @include ui-button();
-  @include ui-button--base();
-  @include base--ui-button--default(
+  @include ui-button($theme);
+  @include ui-button--base($theme);
+  @include base--ui-button--default($theme,
     $radius: $untitled-ui--button--primary--radius,
     $color: $untitled-ui--button--primary--color,
     $border-color: $untitled-ui--button--primary--border-color,

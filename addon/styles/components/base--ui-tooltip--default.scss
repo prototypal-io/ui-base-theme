@@ -6,6 +6,7 @@
   $border-width: $untitled-ui--tooltip--default--border-width,
   $font: $untitled-ui--tooltip--default--font
 ) {
-  @include ui-tooltip--base();
+  @include ui-tooltip--base($theme);
+
   font-family: $font;
 }

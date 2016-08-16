@@ -1,7 +1,7 @@
 @import './base--ui-list---item--default';
 
 @component() {
-  @include base--ui-list---item--default();
+  @include base--ui-list---item--default($theme);
 
   cursor: pointer;
 }

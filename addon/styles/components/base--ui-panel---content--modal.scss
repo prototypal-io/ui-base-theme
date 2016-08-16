@@ -3,5 +3,5 @@
 @component(
   $font: $untitled-ui--panel--modal-content--font
 ) {
-  @include base--ui-panel---content--default($font: $font);
+  @include base--ui-panel---content--default($theme, $font: $font);
 }

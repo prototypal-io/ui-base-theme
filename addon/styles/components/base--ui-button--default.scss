@@ -10,8 +10,8 @@
     $disabled-background: $untitled-ui--button--default--disabled-background,
     $font: $untitled-ui--button--default--font
   ) {
-  @include ui-button();
-  @include ui-button--base();
+  @include ui-button($theme);
+  @include ui-button--base($theme);
 
   border-radius: $radius;
   cursor: pointer;

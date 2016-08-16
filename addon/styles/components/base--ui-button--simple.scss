@@ -5,8 +5,8 @@
   $border-color: #ccc,
   $padding: 0 0.9em
   ) {
-  @include ui-button();
-  @include ui-button--base();
+  @include ui-button($theme);
+  @include ui-button--base($theme);
 
   border: 1px solid $border-color;
   padding: $padding;
