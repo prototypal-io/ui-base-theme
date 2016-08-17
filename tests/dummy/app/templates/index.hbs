@@ -12,6 +12,27 @@
   {{/panel.content}}
 {{/ui-panel}}
 
+{{#ui-panel as |panel|}}
+  {{#panel.titlebar}}
+    Layout
+  {{/panel.titlebar}}
+
+  {{#panel.content}}
+
+    {{#ui-layout as |layout|}}
+      <div>Element Width: {{layout.width}}</div>
+      <div>Element Height: {{layout.height}}</div>
+      <br />
+      {{#if (lte layout.width 500)}}
+        Element is 500px or narrower
+      {{else}}
+        Element is wider than 500px
+      {{/if}}
+    {{/ui-layout}}
+
+  {{/panel.content}}
+{{/ui-panel}}
+
 <h1>Field</h1>
 
 {{#ui-panel as |panel|}}
