@@ -21,7 +21,7 @@ export default UIComponent.extend({
 
   activeBreakpoint: Ember.computed('containerSize', 'breakpoints', function() {
     const containerSize = this.get('containerSize');
-    const breakpoints = this.get('breakpoints').sort();
+    const breakpoints = (this.get('breakpoints') || []).sort();
 
     if (breakpoints.length && breakpoints.indexOf('all') === -1) {
       Ember.Logger.warn("No default layout provided for table row.");
