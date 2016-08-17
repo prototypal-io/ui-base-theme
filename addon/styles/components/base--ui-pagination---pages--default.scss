@@ -1,15 +1,15 @@
 @component(
-  $border-radius: $untitled-ui--pagination--default--radius,
-  $color: $untitled-ui--pagination--default--color,
-  $background: $untitled-ui--pagination--default--background,
-  $hover-color: $untitled-ui--pagination--default--hover-color,
-  $hover-background: $untitled-ui--pagination--default--hover-background,
-  $active-color: $untitled-ui--pagination--default--active-color,
-  $active-background: $untitled-ui--pagination--default--active-background,
-  $padding: $untitled-ui--pagination--default--padding,
-  $margin: $untitled-ui--pagination--default--margin,
-  $width: $untitled-ui--pagination--default--width,
-  $font: $untitled-ui--pagination--default--font
+  $border-radius: ^border-radius,
+  $color: ^primary-color,
+  $background: transparent,
+  $hover-color: darken(^primary-color, 10%),
+  $hover-background: lighten(^primary-color, 10%),
+  $active-color: #FFFFFF,
+  $active-background: ^primary-color,
+  $padding: 0 0.5em,
+  $margin: 0 1px,
+  $width: auto,
+  $font: ^copy-font
 ) {
   flex: 1;
   text-align: center;

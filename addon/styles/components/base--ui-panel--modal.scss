@@ -2,11 +2,11 @@
 
 @component() {
   @include base--ui-panel--default($theme,
-    $border-radius: $untitled-ui--panel--modal--radius,
-    $border-color: $untitled-ui--panel--modal--border-color,
-    $border-size: $untitled-ui--panel--modal--border-size,
-    $background: $untitled-ui--panel--modal--background,
-    $box-shadow: $untitled-ui--panel--modal--box-shadow
+    $border-radius: ^border-radius,
+    $border-color: transparent,
+    $border-size: 0,
+    $background: #FFFFFF,
+    $box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25)
   );
 
   max-height: 90vh;

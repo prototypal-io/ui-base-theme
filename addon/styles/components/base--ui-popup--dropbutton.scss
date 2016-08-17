@@ -1,14 +1,14 @@
 @import './ui-tooltip--base';
 
 @component(
-  $radius: $untitled-ui--popup--dropbutton--radius,
-  $border-color: $untitled-ui--popup--dropbutton--border-color,
-  $border-width: $untitled-ui--popup--dropbutton--border-width,
-  $color: $untitled-ui--popup--dropbutton--color,
-  $background: $untitled-ui--popup--dropbutton--background,
-  $padding: $untitled-ui--popup--dropbutton--padding,
-  $box-shadow: $untitled-ui--popup--dropbutton--box-shadow,
-  $font: $untitled-ui--popup--dropbutton--font
+  $radius: ^border-radius,
+  $border-color: #C6C6C6,
+  $border-width: 1px,
+  $color: #433D32,
+  $background: #FFFFFF,
+  $padding: 5px 0,
+  $box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2),
+  $font: ^copy-font
 ) {
   &--window {
     border-radius: $radius;

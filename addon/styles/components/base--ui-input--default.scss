@@ -1,15 +1,15 @@
 @component(
-  $border-radius: $untitled-ui--input--default--radius,
-  $color: $untitled-ui--input--default--color,
-  $border-color: $untitled-ui--input--default--border-color,
-  $background: $untitled-ui--input--default--background,
-  $disabled-color: $untitled-ui--input--default--disabled-color,
-  $disabled-background: $untitled-ui--input--default--disabled-background,
-  $error-color: $untitled-ui--input--default--error-color,
-  $focus-color: $untitled-ui--input--default--focus-color,
-  $font: $untitled-ui--input--default--font,
-  $padding-x: $untitled-ui--input--default--padding-x,
-  $padding-y: $untitled-ui--input--default--padding-y
+  $background: ^content-background,
+  $border-color: lighten(^default-color, 35%),
+  $border-radius: ^border-radius,
+  $color: ^default-color,
+  $disabled-background: darken(^content-background, 2%),
+  $disabled-color: lighten(^default-color, 25%),
+  $error-color: ^error-color,
+  $focus-color: ^focus-color,
+  $font: ^component-font,
+  $padding-x: 0.4em,
+  $padding-y: 0.5em
 ) {
   border-radius: $border-radius;
   font-family: $font;

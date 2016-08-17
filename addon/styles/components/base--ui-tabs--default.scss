@@ -1,16 +1,16 @@
 @component(
-  $border-radius: $untitled-ui--tabs--default--radius,
-  $color: $untitled-ui--tabs--default--color,
-  $background: $untitled-ui--tabs--default--background,
-  $hover-color: $untitled-ui--tabs--default--hover-color,
-  $hover-background: $untitled-ui--tabs--default--hover-background,
-  $active-color: $untitled-ui--tabs--default--active-color,
-  $active-background: $untitled-ui--tabs--default--active-background,
-  $padding: $untitled-ui--tabs--default--padding,
-  $margin: $untitled-ui--tabs--default--margin,
-  $width: $untitled-ui--tabs--default--width,
-  $align: $untitled-ui--tabs--default--align,
-  $font: $untitled-ui--tabs--default--font
+  $border-radius: ^border-radius,
+  $color: ^primary-color,
+  $background: transparent,
+  $hover-color: darken(^primary-color, 10%),
+  $hover-background: lighten(^primary-color, 46%),
+  $active-color: #FFFFFF,
+  $active-background: ^primary-color,
+  $padding: 0 0.5em,
+  $margin: 0 1px,
+  $width: auto,
+  $align: flex-start,
+  $font: ^copy-font
 ) {
   display: flex;
   justify-content: $align;
