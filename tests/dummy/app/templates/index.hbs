@@ -1,5 +1,27 @@
 {{#ui-panel as |panel|}}
   {{#panel.titlebar}}
+    Error Handling
+  {{/panel.titlebar}}
+
+  {{#panel.content}}
+
+    {{#ui-field as |f|}}
+      {{f.input
+        value=name
+        placeholder="Name (required)"
+        error=isInvalidName
+        forceErrorDisplay=showErrors}}
+    {{/ui-field}}
+
+    {{#ui-button onclick=(action "showErrors")}}
+      Submit / Force Error Display
+    {{/ui-button}}
+
+  {{/panel.content}}
+{{/ui-panel}}
+
+{{#ui-panel as |panel|}}
+  {{#panel.titlebar}}
     Ripple Test
   {{/panel.titlebar}}
 

@@ -4,9 +4,10 @@
   kind=kind
   ids=ids
   placeholder=placeholder
-  onFocusIn=onFocusIn
-  onFocusOut=onFocusOut
+  onFocusIn=(action "onFocusIn")
+  onFocusOut=(action "onFocusOut")
   value=value
+  error=error
   size=size as |component|}}
     {{yield component}}
 {{/component}}

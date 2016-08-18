@@ -14,3 +14,9 @@
       focus-out=focus-out}}
   </div>
 </div>
+
+{{#if states.error.message}}
+  {{#ui-message}}
+    {{states.error.message}}
+  {{/ui-message}}
+{{/if}}
