@@ -14,7 +14,7 @@ Router.map(function() {
   this.route('panel', function() {
     this.route('inbox');
   });
-  this.route('styleguide');
+  this.route('-ui-styleguide', { path: 'styleguide' });
 });
 
 export default Router;

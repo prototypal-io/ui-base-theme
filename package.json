@@ -40,7 +40,6 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-cli-velocity": "0.4.0",
     "ember-code-snippet": "^1.3.0",
-    "ember-composable-helpers": "0.23.1",
     "ember-data": "^2.7.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
@@ -49,7 +48,6 @@
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "ember-wormhole": "0.3.5",
-    "emberx-select": "2.1.2",
     "flexi": "1.1.7",
     "liquid-fire": "^0.24.0",
     "loader.js": "^4.0.1",
@@ -61,8 +59,10 @@
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
     "ember-cli-htmlbars": "^1.0.5",
+    "ember-composable-helpers": "1.0.0",
     "ember-tether": "0.3.1",
     "ember-truth-helpers": "1.2.0",
+    "emberx-select": "2.1.2",
     "untitled-ui": "prototypal-io/untitled-ui"
   },
   "ember-addon": {
