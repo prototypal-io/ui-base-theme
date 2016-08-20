@@ -10,12 +10,22 @@
         value=name
         placeholder="Name (required)"
         error=isInvalidName
-        forceErrorDisplay=showErrors}}
+        displayError=showErrors}}
     {{/ui-field}}
 
-    {{#ui-button onclick=(action "showErrors")}}
-      Submit / Force Error Display
-    {{/ui-button}}
+    {{#ui-button-group size="small" as |group|}}
+      {{#group.button active=(eq showErrors "always") onclick=(action "showErrors" "always")}}
+        Always
+      {{/group.button}}
+
+      {{#group.button active=(eq showErrors "auto") onclick=(action "showErrors" "auto")}}
+        Auto
+      {{/group.button}}
+
+      {{#group.button active=(eq showErrors "never") onclick=(action "showErrors" "never")}}
+        Never
+      {{/group.button}}
+    {{/ui-button-group}}
 
   {{/panel.content}}
 {{/ui-panel}}

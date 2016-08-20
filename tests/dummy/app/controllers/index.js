@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   showMessage: true,
   name: null,
-  showErrors: false,
+  showErrors: 'auto',
 
   isInvalidName: Ember.computed('name', function() {
     const value = this.get('name');
@@ -22,8 +22,8 @@ export default Ember.Controller.extend({
       window.alert('saving');
     },
 
-    showErrors() {
-      this.set('showErrors', true);
+    showErrors(value) {
+      this.set('showErrors', value);
     }
   }
 });

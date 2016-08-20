@@ -7,7 +7,10 @@ export default UIComponent.extend({
 
   disabled: false,
   error: false,
-  forceErrorDisplay: false,
+  displayError: 'auto',
+
+  forceShowError: Ember.computed.equal('displayError', 'always'),
+  forceHideError: Ember.computed.equal('displayError', 'never'),
 
   _wasFocused: false,
   _previousErrorState: null,
@@ -19,21 +22,24 @@ export default UIComponent.extend({
     };
   }),
 
-  _errorState: Ember.computed('error', '_wasFocused', 'forceErrorDisplay', 'value', function() {
-    const wasFocused = this.get('_wasFocused');
-    const error = this.get('error');
-    const forceErrorDisplay = this.get('forceErrorDisplay');
-    const previousErrorState = this.get('_previousErrorState');
-    let errorState = false;
-
-    if (error && (wasFocused || previousErrorState || forceErrorDisplay)) {
-      errorState = {
-        hasError: true,
-        message: typeof error === 'string' ? error : null
-      };
+  _errorState: Ember.computed('error', '_wasFocused', 'forceShowError', 'forceHideError', 'value', function() {
+    if (this.get('forceHideError')) {
+      return false;
     }
 
-    return this.set('_previousErrorState', errorState);
+    const wasFocused = this.get('_wasFocused');
+    const error = this.get('error');
+    const forceShowError = this.get('forceShowError');
+    const previousErrorState = this.get('_previousErrorState');
+
+    if (error && (wasFocused || previousErrorState || forceShowError)) {
+      return this.set('_previousErrorState', {
+        hasError: true,
+        message: typeof error === 'string' ? error : null
+      });
+    }
+
+    return false;
   }),
 
   actions: {
