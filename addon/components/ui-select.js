@@ -1,29 +1,16 @@
 import Ember from 'ember';
+import UIValidated from './ui-validated';
 import layout from '../templates/components/ui-select';
 
-export default Ember.Component.extend({
+export default UIValidated.extend({
   layout,
-  tagName: '',
 
-  kind: 'default',
   disabled: false,
-  error: false,
 
-  frame: Ember.computed('kind', function() {
-    return `ui-select--${this.get('kind')}`;
-  }),
-
-  classes: Ember.computed('class', 'size', function() {
-    return {
-      class: this.get('class'),
-      size: `ui-font-size--${this.get('size')}`
-    };
-  }),
-
-  states: Ember.computed('disabled', 'error', function() {
+  states: Ember.computed('disabled', 'errorState', function() {
     return {
       disabled: this.get('disabled'),
-      error: this.get('error')
+      error: this.get('errorState')
     };
   })
 });

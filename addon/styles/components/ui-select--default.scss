@@ -1,3 +1,6 @@
 @component() {
-  width: 100%;
+  &--select {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }

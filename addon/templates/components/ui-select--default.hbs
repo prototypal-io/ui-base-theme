@@ -1,8 +1,19 @@
-{{#x-select
-  class="ui-select--default"
-  disabled=states.disabled
-  focusIn=onFocusIn
-  focusOut=onFocusOut
-  value=value as |xs|}}
-    {{yield (hash option=xs.option)}}
-{{/x-select}}
+<div {{ui-root}}>
+  <div class="wrapper">
+    {{#x-select
+      class=(concat uiPrefix "--select "
+            (ui-state states 'disabled' 'error' el=(concat uiPrefix '--select')))
+      disabled=states.disabled
+      focusIn=onFocusIn
+      focusOut=onFocusOut
+      value=value as |xs|}}
+        {{yield (hash option=xs.option)}}
+    {{/x-select}}
+  </div>
+</div>
+
+{{#if states.error.message}}
+  {{#ui-message}}
+    {{states.error.message}}
+  {{/ui-message}}
+{{/if}}
