@@ -19,7 +19,7 @@
 </label>
 
 {{#if states.error.message}}
-  {{#ui-message}}
+  {{#ui-message kind="input-error" size="small"}}
     {{states.error.message}}
   {{/ui-message}}
 {{/if}}
