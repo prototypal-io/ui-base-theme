@@ -17,3 +17,9 @@
 
   {{yield}}
 </label>
+
+{{#if states.error.message}}
+  {{#ui-message}}
+    {{states.error.message}}
+  {{/ui-message}}
+{{/if}}
