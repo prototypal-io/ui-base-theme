@@ -1,17 +1,16 @@
 import Ember from 'ember';
-import UIComponent from './ui-component';
+import UIValidated from './ui-validated';
 import layout from '../templates/components/ui-input';
 
-export default UIComponent.extend({
+export default UIValidated.extend({
   layout,
 
   disabled: false,
-  error: false,
 
-  states: Ember.computed('disabled', 'error', function() {
+  states: Ember.computed('disabled', 'errorState', function() {
     return {
       disabled: this.get('disabled'),
-      error: this.get('error')
+      error: this.get('errorState')
     };
   })
 });

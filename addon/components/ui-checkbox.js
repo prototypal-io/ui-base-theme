@@ -1,18 +1,17 @@
 import Ember from 'ember';
-import UIComponent from './ui-component';
+import UIValidated from './ui-validated';
 import layout from '../templates/components/ui-checkbox';
 
-export default UIComponent.extend({
+export default UIValidated.extend({
   layout,
 
   disabled: false,
-  error: false,
   value: false,
 
-  states: Ember.computed('disabled', 'error', 'value', function() {
+  states: Ember.computed('disabled', 'errorState', 'value', function() {
     return {
       disabled: this.get('disabled'),
-      error: this.get('error'),
+      error: this.get('errorState'),
       checked: this.get('value')
     };
   })

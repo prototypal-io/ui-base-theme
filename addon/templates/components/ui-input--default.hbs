@@ -10,7 +10,12 @@
       value=value
       aria-labelledby=ids.label
       class=(concat uiPrefix "--input "
-                    (ui-state states 'disabled' 'error' el=(concat uiPrefix '--input')))
-      focus-out=focus-out}}
+                    (ui-state states 'disabled' 'error' el=(concat uiPrefix '--input')))}}
   </div>
 </div>
+
+{{#if states.error.message}}
+  {{#ui-message kind="input-error" size="small"}}
+    {{states.error.message}}
+  {{/ui-message}}
+{{/if}}

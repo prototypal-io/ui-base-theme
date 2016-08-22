@@ -98,6 +98,15 @@ $untitled-ui--message--default--padding: 0.5em;
 $untitled-ui--message--default--box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 $untitled-ui--message--default--font: $untitled-ui--copy-font;
 
+$untitled-ui--message--error--radius: $untitled-ui--border-radius;
+$untitled-ui--message--error--color: $untitled-ui--default-color;
+$untitled-ui--message--error--background: linear-gradient(to bottom, white 0%, #f3f3f3 100%);
+$untitled-ui--message--error--border-color: #c5c5c5;
+$untitled-ui--message--error--border-width: 1px;
+$untitled-ui--message--error--padding: 0.3em;
+$untitled-ui--message--error--box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+$untitled-ui--message--error--font: $untitled-ui--copy-font;
+
 $untitled-ui--pagination--default--radius: $untitled-ui--border-radius;
 $untitled-ui--pagination--default--color: $untitled-ui--primary-color;
 $untitled-ui--pagination--default--background: transparent;
