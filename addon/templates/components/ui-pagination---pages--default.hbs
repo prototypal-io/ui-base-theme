@@ -1,5 +1,5 @@
 <div {{ui-root}}>
   {{yield (hash
-    page=(component "link-to" class="ui-pagination---pages--default---page"))
+    page=(component "link-to" class=(concat uiPrefix "---page")))
   }}
 </div>
