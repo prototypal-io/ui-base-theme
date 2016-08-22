@@ -1,5 +1,5 @@
 <div {{ui-root}}>
   {{yield (hash
-    item=(component (concat "ui-list---item" "--" kind))
+    item=(component "ui-list---item" kind=kind)
   )}}
 </div>
