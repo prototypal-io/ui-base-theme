@@ -1,3 +1,7 @@
 <div {{ui-root}}>
-  {{yield (hash link-to=(component "link-to" class="ui-tabs--default--tab ui-tabs--default--tab--link"))}}
+  {{yield (hash
+    link-to=(component "link-to"
+      class=(concat uiPrefix "--tab" " " uiPrefix "--tab--link")
+    )
+  )}}
 </div>
