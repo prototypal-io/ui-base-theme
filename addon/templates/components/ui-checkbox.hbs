@@ -1,9 +1,13 @@
 {{#component frame
+  action=(hash
+    onMouseEnter=(action "onMouseEnter")
+    onMouseLeave=(action "onMouseLeave")
+    onFocusIn=(action "onFocusIn")
+    onFocusOut=(action "onFocusOut")
+  )
   classes=classes
   states=states
   size=size
-  onFocusIn=(action "onFocusIn")
-  onFocusOut=(action "onFocusOut")
   value=value}}
     {{yield}}
 {{/component}}

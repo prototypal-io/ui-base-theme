@@ -1,17 +1,19 @@
 <label {{ui-root}}
-  class="{{unless states.disabled 'enabled'}}
-         {{ui-state states 'disabled' 'checked' 'error'}}">
+  onmouseenter={{action action.onMouseEnter}}
+  onmouseleave={{action action.onMouseLeave}}
+  class="{{ui-state states 'disabled' 'enabled' 'checked' 'error'}}"
+>
   {{input
-    class="ui-checkbox--default--input"
+    class=(concat uiPrefix "--input")
     type="checkbox"
     checked=value
-    focusIn=onFocusIn
-    focusOut=onFocusOut
+    focusIn=action.onFocusIn
+    focusOut=action.onFocusOut
     disabled=states.disabled}}
 
-  <div class="component">
-    <div class="component--wrapper">
-      <div class="component--icon"></div>
+  <div class="component {{ui-state states 'checked' 'disabled' 'enabled' 'error' 'focused' el='component'}}">
+    <div class="component-wrapper {{ui-state states 'checked' 'disabled' el='component-wrapper'}}">
+      <div class="component-icon {{ui-state states 'checked' 'disabled' 'enabled' 'focused' 'hover' el='component-icon'}}"></div>
     </div>
   </div>
 

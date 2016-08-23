@@ -1,7 +1,5 @@
 {{!- BEGIN-SNIPPET demo--ui-checkbox -}}
-{{#ui-field kind=kind size=size type="checkbox" as |f|}}
-  {{#f.input disabled=activeStates.disabled error=activeStates.error}}
-    {{size}}
-  {{/f.input}}
-{{/ui-field}}
+{{#ui-checkbox _activeStates=activeStates kind=kind size=size disabled=activeStates.disabled error=activeStates.error}}
+  {{size}}
+{{/ui-checkbox}}
 {{!- END-SNIPPET -}}
