@@ -1,7 +1,7 @@
 {{#if showPopup}}
   <div class="overlay" {{action action.hide}}></div>
 
-  {{#component tether classPrefix="ui-popup--dropbutton-"}}
+  {{#component tether classPrefix=(concat uiPrefix "-")}}
     <div {{ui-root}} class="window">
       <div class="window--wrapper">
         {{#ui-prevent-scroll-outside}}
