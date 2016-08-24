@@ -2,6 +2,9 @@
   classes=classes
   kind=kind
   size=size
-  action=(hash close=(if onclose (action "close"))) as |component|}}
-    {{yield component}}
+  action=(hash
+    close=(if onclose (action "close"))
+  )
+as |component|}}
+  {{yield component}}
 {{/component}}
