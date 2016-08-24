@@ -1,9 +1,6 @@
 @import './ui-tooltip--base';
 
 @component(
-  $color: ^primary-color,
-  $border-style: dotted,
-  $border-width: 1px,
   $font: ^copy-font
 ) {
   @include ui-tooltip--base($theme);
