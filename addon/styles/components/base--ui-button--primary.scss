@@ -1,11 +1,11 @@
 @import './ui-button';
 @import './ui-button--base';
-@import './ui-button--default';
+@import './base--ui-button--default';
 
 @component() {
   @include ui-button();
   @include ui-button--base();
-  @include ui-button--default(
+  @include base--ui-button--default(
     $radius: $untitled-ui--button--primary--radius,
     $color: $untitled-ui--button--primary--color,
     $border-color: $untitled-ui--button--primary--border-color,
