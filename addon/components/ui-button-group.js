@@ -5,6 +5,8 @@ import layout from '../templates/components/ui-button-group';
 export default UIComponent.extend({
   layout,
 
+  theme: 'base',
+
   buttons: Ember.computed(function() {
     return Ember.A([]);
   }),

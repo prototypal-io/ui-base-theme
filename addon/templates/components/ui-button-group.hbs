@@ -1,8 +1,15 @@
-<div {{ui-root}} id="{{id}}">
-  {{yield (hash button=(component "ui-button" buttonGroup=(hash firstChild=firstChild
-                                                                lastChild=lastChild)
-                                              register=(action "registerButton")
-                                              kind=kind
-                                              size=size)
-  )}}
-</div>
+{{#component frame
+  action=(hash
+    registerButton=(action "registerButton")
+  )
+  buttonGroup=(hash
+    firstChild=firstChild
+    lastChild=lastChild
+  )
+  classes=classes
+  firstChild=firstChild
+  kind=kind
+  size=size
+as |component|}}
+  {{yield component}}
+{{/component}}
