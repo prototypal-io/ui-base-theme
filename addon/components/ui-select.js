@@ -7,6 +7,8 @@ export default UIValidated.extend({
 
   disabled: false,
 
+  theme: 'base',
+
   states: Ember.computed('disabled', 'errorState', function() {
     return {
       disabled: this.get('disabled'),
