@@ -1,7 +1,7 @@
-@import './ui-message--default';
+@import './base--ui-message--default';
 
 @component() {
-  @include ui-message--default(
+  @include base--ui-message--default(
     $radius: $untitled-ui--message--error--radius,
     $color: $untitled-ui--message--error--color,
     $background: $untitled-ui--message--error--background,
