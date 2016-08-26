@@ -1,7 +1,0 @@
-@import './ui-panel---content--default';
-
-@component(
-  $font: $untitled-ui--panel--modal-content--font
-) {
-  @include ui-panel---content--default($font: $font);
-}

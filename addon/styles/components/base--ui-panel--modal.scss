@@ -1,7 +1,7 @@
-@import './ui-panel--default';
+@import './base--ui-panel--default';
 
 @component() {
-  @include ui-panel--default(
+  @include base--ui-panel--default(
     $border-radius: $untitled-ui--panel--modal--radius,
     $border-color: $untitled-ui--panel--modal--border-color,
     $border-size: $untitled-ui--panel--modal--border-size,
