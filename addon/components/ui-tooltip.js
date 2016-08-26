@@ -7,6 +7,8 @@ export default UIComponent.extend({
 
   showTooltip: false,
 
+  theme: 'base',
+
   targetId: Ember.computed(function() {
     return `${Ember.guidFor(this)}--target`;
   }),

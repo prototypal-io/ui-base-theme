@@ -8,13 +8,4 @@
 ) {
   @include ui-tooltip--base();
   font-family: $font;
-
-  &-target {
-    display: inline-block;
-    cursor: help;
-    color: $color;
-    border-bottom-style: $border-style;
-    border-bottom-width: $border-width;
-    cursor: pointer;
-  }
 }

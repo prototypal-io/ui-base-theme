@@ -1,0 +1,13 @@
+@component(
+  $color: $untitled-ui--tooltip--default--color,
+  $border-style: $untitled-ui--tooltip--default--border-style,
+  $border-width: $untitled-ui--tooltip--default--border-width,
+  $font: $untitled-ui--tooltip--default--font
+) {
+  display: inline-block;
+  cursor: help;
+  color: $color;
+  border-bottom-style: $border-style;
+  border-bottom-width: $border-width;
+  cursor: pointer;
+}

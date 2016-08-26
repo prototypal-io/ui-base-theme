@@ -1,6 +1,6 @@
 <div {{ui-root}}>
   {{yield (hash
-    target=(component "ui-tooltip--default-target" tooltip=tooltip)
+    target=(component "ui-tooltip---target" kind="default" tooltip=tooltip)
     popup=(component "ui-popup" targetId=tooltip.targetId
                                 showPopup=tooltip.showTooltip
                                 show=tooltip.action.show
