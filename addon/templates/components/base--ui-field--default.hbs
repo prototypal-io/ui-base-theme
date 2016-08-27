@@ -1,0 +1,18 @@
+<div {{ui-root}} class="{{ui-state states 'focus'}}">
+  {{yield (hash
+    states=states
+    description=(component "ui-field---description"
+      kind=kind
+      size=size
+    )
+    input=(component input
+      ids=ids
+      size=size
+    )
+    label=(component "ui-field---label"
+      kind=kind
+      ids=ids
+      size=size
+    )
+  )}}
+</div>
