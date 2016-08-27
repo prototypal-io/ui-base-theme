@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import UIKindComponent from './ui-kind';
-import layout from 'ui-base-theme/templates/components/ui-icon--fontawesome';
+import layout from 'ui-base-theme/templates/components/base--ui-icon--fontawesome';
 
 const TYPE_SCALE = ['x-small', 'small', 'medium', 'large', 'x-large'];
 
