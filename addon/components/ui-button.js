@@ -14,8 +14,6 @@ export default UIComponent.extend({
   focus: state(),
   loading: state(),
 
-  theme: 'base',
-
   isDisabled: Ember.computed.or('disabled', 'loading'),
 
   states: Ember.computed('isDisabled', 'loading', 'active', 'browserActive', 'focus', function() {

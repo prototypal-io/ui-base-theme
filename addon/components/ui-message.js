@@ -4,8 +4,6 @@ import layout from '../templates/components/ui-message';
 export default UIComponent.extend({
   layout,
 
-  theme: 'base',
-
   actions: {
     close() {
       // TODO animate out

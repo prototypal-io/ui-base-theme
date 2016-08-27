@@ -9,8 +9,6 @@ export default UIComponent.extend({
   loading: false,
   showPopup: false,
 
-  theme: 'base',
-
   isDisabled: Ember.computed.or('disabled', 'loading'),
 
   states: Ember.computed('isDisabled', 'loading', 'showPopup', function() {
