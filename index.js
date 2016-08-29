@@ -4,5 +4,6 @@
 var Theme = require('untitled-ui/theme');
 
 module.exports = Theme.extend({
-  name: 'ui-base-theme'
+  name: 'ui-base-theme',
+  prefix: 'base'
 });
