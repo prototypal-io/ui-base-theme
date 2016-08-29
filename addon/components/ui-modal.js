@@ -37,7 +37,7 @@ export default UIComponent.extend({
 
   animateIn(element) {
     const modal = $(element).find('.ui-modal--modal');
-    const backdrop = $(element).find('.ui-modal-backdrop');
+    const backdrop = $(element).find('[class*="ui-backdrop"]');
 
     const modalAnimation = window.$.Velocity.animate(modal, {
       opacity: [1, 0],
@@ -58,7 +58,7 @@ export default UIComponent.extend({
 
   animateOut(element) {
     const modal = $(element).find('.ui-modal--modal');
-    const backdrop = $(element).find('.ui-modal-backdrop');
+    const backdrop = $(element).find('[class*="ui-backdrop"]');
 
     const modalAnimation = window.$.Velocity.animate(modal, {
       opacity: [0, 1],

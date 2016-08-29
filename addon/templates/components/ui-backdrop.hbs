@@ -1,0 +1,9 @@
+{{#component frame
+  action=(hash
+    onclick=(action "onclick")
+  )
+  classes=classes
+  kind=kind
+  size=size as |component|}}
+    {{yield component}}
+{{/component}}
