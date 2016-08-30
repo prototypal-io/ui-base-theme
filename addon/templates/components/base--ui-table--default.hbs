@@ -1,0 +1,15 @@
+<ul {{ui-root}}>
+  {{yield (hash
+    data=data
+    layouts=layouts
+    layout=rowLayout
+    row=(component "ui-table---row" kind=kind size=size)
+    row-cell=(component "ui-table---row-cell" kind=kind size=size)
+    header=(component "ui-table---header" kind=kind sortBy=sortBy size=size)
+    header-cell=(component "ui-table---header-cell"
+      sortBy=sortBy
+      size=size
+      action=action
+    )
+  )}}
+</ul>

@@ -1,0 +1,7 @@
+<div {{ui-root}}>
+  <div class="wrapper">
+    {{yield (hash
+      titlebar=(component "ui-panel---titlebar" kind="modal")
+      content=(component "ui-panel---content" kind="modal"))}}
+  </div>
+</div>

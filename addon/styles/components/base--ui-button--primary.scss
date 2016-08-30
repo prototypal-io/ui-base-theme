@@ -1,0 +1,17 @@
+@import './ui-button';
+@import './ui-button--base';
+@import './base--ui-button--default';
+
+@component() {
+  @include ui-button();
+  @include ui-button--base();
+  @include base--ui-button--default(
+    $radius: $untitled-ui--button--primary--radius,
+    $color: $untitled-ui--button--primary--color,
+    $border-color: $untitled-ui--button--primary--border-color,
+    $background: $untitled-ui--button--primary--background,
+    $disabled-background: $untitled-ui--button--primary--disabled-background,
+    $disabled-border-color: $untitled-ui--button--primary--disabled-border-color,
+    $font: $untitled-ui--button--primary--font
+  );
+};

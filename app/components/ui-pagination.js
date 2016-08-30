@@ -1,1 +1,1 @@
-export { default } from 'ui-base-theme/components/ui-pagination';
+export { default } from 'ui-base-theme/components/ui-component';

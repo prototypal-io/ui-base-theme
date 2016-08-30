@@ -1,0 +1,6 @@
+<div {{ui-root}}>
+  {{yield (hash
+    left=(component "ui-panel---titlebar-action" kind="modal" location="left")
+    right=(component "ui-panel---titlebar-action" kind="modal" location="right")
+  )}}
+</div>

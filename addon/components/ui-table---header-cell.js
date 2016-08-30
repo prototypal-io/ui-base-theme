@@ -1,9 +1,7 @@
 import UIComponent from './ui-component';
-import layout from 'ui-base-theme/templates/components/ui-list---item';
+import layout from '../templates/components/ui-table---layout';
 
 export default UIComponent.extend({
-  layout,
-
   actions: {
     onclick() {
       if (this.attrs.onclick) {

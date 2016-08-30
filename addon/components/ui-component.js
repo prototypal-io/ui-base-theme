@@ -6,6 +6,7 @@ const UIComponent = Ember.Component.extend({
 
   layout,
   tagName: '',
+  theme: 'base',
 
   kind: 'default',
   size: 'medium',

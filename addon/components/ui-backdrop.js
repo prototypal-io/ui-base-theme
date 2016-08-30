@@ -1,5 +1,5 @@
 import UIComponent from './ui-component';
-import layout from 'ui-base-theme/templates/components/ui-list---item';
+import layout from '../templates/components/ui-backdrop';
 
 export default UIComponent.extend({
   layout,

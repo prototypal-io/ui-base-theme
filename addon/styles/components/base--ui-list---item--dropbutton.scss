@@ -1,0 +1,7 @@
+@import './base--ui-list---item--default';
+
+@component() {
+  @include base--ui-list---item--default();
+
+  cursor: pointer;
+}

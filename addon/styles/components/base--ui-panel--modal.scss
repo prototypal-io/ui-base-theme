@@ -1,0 +1,19 @@
+@import './base--ui-panel--default';
+
+@component() {
+  @include base--ui-panel--default(
+    $border-radius: $untitled-ui--panel--modal--radius,
+    $border-color: $untitled-ui--panel--modal--border-color,
+    $border-size: $untitled-ui--panel--modal--border-size,
+    $background: $untitled-ui--panel--modal--background,
+    $box-shadow: $untitled-ui--panel--modal--box-shadow
+  );
+
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+
+  &--wrapper {
+    max-height: inherit;
+  }
+}

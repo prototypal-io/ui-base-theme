@@ -4,26 +4,16 @@ export default Ember.Service.extend({
   cache: {},
 
   lookup(base, kind, theme) {
-    let identifier;
+    let identifier = `${base}--${kind}`;
 
-    if (theme) {
-      identifier = `${theme}--${base}--${kind}`;
-    } else {
-      identifier = `${base}--${kind}`;
-    }
-
-    return this.get('cache')[identifier] || identifier;
+    return this.get('cache')[identifier] || `${theme}--${base}--${kind}`;
   },
 
   register(base, kind, theme) {
     let identifier = `${base}--${kind}`;
     let cache = this.get('cache');
 
-    if (theme) {
-      cache[identifier] = `${theme}--${base}--${kind}`;
-    } else {
-      cache[identifier] = `${base}--${kind}`;
-    }
+    cache[identifier] = `${theme}--${base}--${kind}`;
 
     return cache[identifier];
   }

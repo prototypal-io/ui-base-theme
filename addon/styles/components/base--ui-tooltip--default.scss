@@ -1,0 +1,11 @@
+@import './ui-tooltip--base';
+
+@component(
+  $color: $untitled-ui--tooltip--default--color,
+  $border-style: $untitled-ui--tooltip--default--border-style,
+  $border-width: $untitled-ui--tooltip--default--border-width,
+  $font: $untitled-ui--tooltip--default--font
+) {
+  @include ui-tooltip--base();
+  font-family: $font;
+}

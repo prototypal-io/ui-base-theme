@@ -1,0 +1,7 @@
+<div {{ui-root}}
+  class="{{if sortedWhen 'sortable'}}
+         {{if (eq sortBy sortedWhen) 'sorted'}}"
+  style="flex: {{size.flex}}; min-width: {{size.min}}; max-width: {{size.max}}"
+>
+  {{yield}}
+</div>
