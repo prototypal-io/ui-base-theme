@@ -1,8 +1,9 @@
 <div {{ui-root}}>
   <div class="wrapper">
     {{#x-select
-      class=(concat uiPrefix "--select "
-            (ui-state states 'disabled' 'error' el=(concat uiPrefix '--select')))
+      class=(concat "select "
+        (ui-state states "disabled" "error" el="select")
+      )
       disabled=states.disabled
       focusIn=onFocusIn
       focusOut=onFocusOut
