@@ -6,7 +6,7 @@
 
     {{#if action.close}}
       <div class="close" {{action action.close}}>
-        {{ui-icon icon="close" class="ui-message--default--close--icon"}}
+        {{ui-icon icon="close" class=(concat ui-prefix "--close--icon")}}
       </div>
     {{/if}}
   </div>

@@ -1,15 +1,15 @@
 @component(
-  $border-radius: $untitled-ui--textarea--default--radius,
-  $color: $untitled-ui--textarea--default--color,
-  $border-color: $untitled-ui--textarea--default--border-color,
-  $background: $untitled-ui--textarea--default--background,
-  $disabled-color: $untitled-ui--textarea--default--disabled-color,
-  $disabled-background: $untitled-ui--textarea--default--disabled-background,
-  $error-color: $untitled-ui--textarea--default--error-color,
-  $focus-color: $untitled-ui--textarea--default--focus-color,
-  $font: $untitled-ui--textarea--default--font,
-  $padding-x: $untitled-ui--textarea--default--padding-x,
-  $padding-y: $untitled-ui--textarea--default--padding-y
+  $border-radius: ^border-radius,
+  $color: ^default-color,
+  $border-color: lighten(^default-color, 35%),
+  $background: ^content-background,
+  $disabled-color: lighten(^default-color, 25%),
+  $disabled-background: darken(^content-background, 2%),
+  $error-color: ^error-color,
+  $focus-color: ^focus-color,
+  $font: ^component-font,
+  $padding-x: 0.4em,
+  $padding-y: 0.5em
 ) {
   border-radius: $border-radius;
   font-family: $font;

@@ -1,9 +1,9 @@
 @component(
-  $color: $untitled-ui--font-color,
-  $opacity: $untitled-ui--field--default-description--opacity,
-  $font: $untitled-ui--field--default-description--font,
-  $font-size: $untitled-ui--field--default-description--font-size,
-  $margin: $untitled-ui--field--default-description--margin
+  $color: ^font-color,
+  $opacity: 0.6,
+  $font: ^copy-font,
+  $font-size: 0.9em,
+  $margin: 0.3em 0 0.6em 0
 ) {
   font-size: $font-size;
   margin: $margin;

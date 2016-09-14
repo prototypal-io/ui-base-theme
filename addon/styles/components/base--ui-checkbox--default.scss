@@ -1,15 +1,15 @@
 @component(
-  $radius: $untitled-ui--checkbox--default--radius,
-  $color: $untitled-ui--checkbox--default--color,
-  $border-color: $untitled-ui--checkbox--default--border-color,
-  $background: $untitled-ui--checkbox--default--background,
-  $checked-border-color: $untitled-ui--checkbox--default--checked-border-color,
-  $checked-background: $untitled-ui--checkbox--default--checked-background,
-  $disabled-border-color: $untitled-ui--checkbox--default--disabled-border-color,
-  $disabled-background: $untitled-ui--checkbox--default--disabled-background,
-  $error-color: $untitled-ui--checkbox--default--error-color,
-  $focus-color: $untitled-ui--checkbox--default--focus-color,
-  $font: $untitled-ui--checkbox--default--font
+  $radius: ^border-radius,
+  $color: ^default-color,
+  $border-color: lighten(^default-color, 35%),
+  $background: #FFFFFF,
+  $checked-border-color: ^primary-color,
+  $checked-background: lighten(^primary-color, 10%),
+  $disabled-border-color: lighten(^default-color, 25%),
+  $disabled-background: lighten(^default-color, 25%),
+  $error-color: ^error-color,
+  $focus-color: ^focus-color,
+  $font: ^copy-font
 ) {
   display: inline-block;
   cursor: pointer;

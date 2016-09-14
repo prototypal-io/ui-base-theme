@@ -1,5 +1,5 @@
 @import './ui-list--base';
 
 @component() {
-  @include ui-list--base();
+  @include ui-list--base($theme);
 }

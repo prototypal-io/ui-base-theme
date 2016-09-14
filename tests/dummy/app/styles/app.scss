@@ -4,3 +4,27 @@ body {
 }
 
 @import 'ui-base-theme';
+
+.base {
+  @include ui-base-theme(
+    $page-background: #f5f8f9,
+    $content-background: #ffffff,
+    $font-color: #303030,
+    $default-color: #6a6a6a,
+    $primary-color: #1787e5,
+    $focus-color: #0090ff,
+    $error-color: #ff0000,
+
+    $border-radius: 0.3em,
+
+    $heading-font: ("Helvetica", "sans-serif"),
+    $copy-font: ("Helvetica", "sans-serif"),
+    $component-font: ("Helvetica", "sans-serif"),
+
+    $font-size--x-small: 0.6rem,
+    $font-size--small: 0.8rem,
+    $font-size--medium: 1rem,
+    $font-size--large: 1.3rem,
+    $font-size--x-large: 1.6rem
+  );
+}

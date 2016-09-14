@@ -2,16 +2,24 @@
 @import './ui-button--base';
 @import './base--ui-button--default';
 
-@component() {
-  @include ui-button();
-  @include ui-button--base();
-  @include base--ui-button--default(
-    $radius: $untitled-ui--button--primary--radius,
-    $color: $untitled-ui--button--primary--color,
-    $border-color: $untitled-ui--button--primary--border-color,
-    $background: $untitled-ui--button--primary--background,
-    $disabled-background: $untitled-ui--button--primary--disabled-background,
-    $disabled-border-color: $untitled-ui--button--primary--disabled-border-color,
-    $font: $untitled-ui--button--primary--font
+@component(
+  $radius: ^border-radius,
+  $color: ^primary--color,
+  $border-color: lighten(^primary-color, 10%),
+  $background: #FFFFFF,
+  $disabled-border-color: lighten(^primary-color, 25%),
+  $disabled-background: lighten(^primary-color, 49%),
+  $font: ^component-font
+) {
+  @include ui-button($theme);
+  @include ui-button--base($theme);
+  @include base--ui-button--default($theme,
+    $radius: $radius,
+    $color: $color,
+    $border-color: $border-color,
+    $background: $background,
+    $disabled-background: $disabled-background,
+    $disabled-border-color: $disabled-border-color,
+    $font: $font
   );
 };

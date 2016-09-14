@@ -2,16 +2,16 @@
 @import './ui-button--base';
 
 @component(
-    $radius: $untitled-ui--button--default--radius,
-    $color: $untitled-ui--button--default--color,
-    $border-color: $untitled-ui--button--default--border-color,
-    $background: $untitled-ui--button--default--background,
-    $disabled-border-color: $untitled-ui--button--default--disabled-border-color,
-    $disabled-background: $untitled-ui--button--default--disabled-background,
-    $font: $untitled-ui--button--default--font
-  ) {
-  @include ui-button();
-  @include ui-button--base();
+  $radius: ^border-radius,
+  $color: ^default--color,
+  $border-color: lighten(^default-color, 35%),
+  $background: #FFFFFF,
+  $disabled-border-color: lighten(^default-color, 25%),
+  $disabled-background: lighten(^default-color, 55%),
+  $font: ^component-font
+) {
+  @include ui-button($theme);
+  @include ui-button--base($theme);
 
   border-radius: $radius;
   cursor: pointer;

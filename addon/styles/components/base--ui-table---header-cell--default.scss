@@ -1,13 +1,13 @@
 @component(
-  $color: $untitled-ui--table--default-header-cell--color,
-  $sortable-hover-color: $untitled-ui--table--default-header-cell--sortable-hover-color,
-  $sorted-border-style: $untitled-ui--table--default-header-cell--sorted-border-style,
-  $sorted-border-width: $untitled-ui--table--default-header-cell--sorted-border-width,
-  $sorted-border-color: $untitled-ui--table--default-header-cell--sorted-border-color,
-  $text-transform: $untitled-ui--table--default-header-cell--text-transform,
-  $padding: $untitled-ui--table--default-header-cell--padding,
-  $font: $untitled-ui--table--default-header-cell--font,
-  $font-size: $untitled-ui--table--default-header-cell--font-size
+  $color: #8ea1a8,
+  $sortable-hover-color: ^primary-color,
+  $sorted-border-style: solid,
+  $sorted-border-width: 3px,
+  $sorted-border-color: #E0EAED,
+  $text-transform: uppercase,
+  $padding: 0.8em 0.3em,
+  $font: ^copy-font,
+  $font-size: 0.7em
 ) {
   flex: 1;
   padding: $padding;

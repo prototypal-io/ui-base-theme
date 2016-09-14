@@ -1,13 +1,13 @@
 @component(
-  $color: $untitled-ui--list--default-item--color,
-  $background: $untitled-ui--list--default-item--background,
-  $border-color: $untitled-ui--list--default-item--border-color,
-  $border-style: $untitled-ui--list--default-item--border-style,
-  $border-width: $untitled-ui--list--default-item--border-width,
-  $padding: $untitled-ui--list--default-item--padding,
-  $hover-color: $untitled-ui--list--default-item--hover-color,
-  $hover-background: $untitled-ui--list--default-item--hover-background,
-  $font: $untitled-ui--list--default-item--font
+  $color: ^default-color,
+  $background: ^content-background,
+  $border-color: #E2E2E2,
+  $border-style: solid,
+  $border-width: 1px,
+  $padding: 0 0.5em,
+  $hover-color: #FFFFFF,
+  $hover-background: ^primary-color,
+  $font: ^copy-font
 ) {
   position: relative;
   display: block;
