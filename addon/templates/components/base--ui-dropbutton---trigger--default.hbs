@@ -13,8 +13,9 @@
       active=states.active}}
         {{ui-icon
           icon="dropbutton"
-          class=(concat uiPrefix "--icon "
-                        (ui-state states 'disabled' el=(concat uiPrefix '--icon')))
+          class=(concat "icon "
+            (ui-state states "disabled" el="icon")
+          )
         }}
     {{/group.button}}
   {{/ui-button-group}}
@@ -30,8 +31,9 @@
       {{yield}}
       {{ui-icon
         icon="dropbutton"
-        class=(concat uiPrefix "--icon "
-                      (ui-state states 'disabled' el=(concat uiPrefix '--icon')))
+        class=(concat "icon "
+          (ui-state states "disabled" el="icon")
+        )
       }}
   {{/ui-button}}
 {{/if}}
