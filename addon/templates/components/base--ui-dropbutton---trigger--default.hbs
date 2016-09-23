@@ -1,5 +1,5 @@
 {{#if onclick}}
-  {{#ui-button-group size=size id=targetId as |group|}}
+  {{#ui-button-group size=size buttonGroupId=targetId as |group|}}
     {{#group.button
       disabled=states.disabled
       loading=states.loading
@@ -25,7 +25,7 @@
     disabled=states.disabled
     loading=states.loading
     size=size
-    id=targetId
+    buttonId=targetId
     onclick=popup.toggle
     active=states.active}}
       {{yield}}
