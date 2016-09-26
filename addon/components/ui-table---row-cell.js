@@ -6,13 +6,5 @@ export default UIComponent.extend({
     return {
       class: this.get('class')
     };
-  }),
-
-  actions: {
-    onclick() {
-      if (this.attrs.onclick) {
-        this.attrs.onclick(...arguments);
-      }
-    }
-  }
+  })
 });
