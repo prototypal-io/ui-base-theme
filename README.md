@@ -1,5 +1,7 @@
 # ui-base-theme
 
+[![Build Status](https://travis-ci.org/prototypal-io/ui-base-theme.svg?branch=master)](https://travis-ci.org/prototypal-io/ui-base-theme)
+
 The base theme for [untitled-ui](https://github.com/prototypal-io/untitled-ui#ui-base-theme)
 upon which custom themes should be built.
 
