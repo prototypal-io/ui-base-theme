@@ -12,8 +12,8 @@ moduleForComponent('ui-component', 'Integration | Component | ui component', {
 
   beforeEach() {
     this.register('component:ui-car', UICarComponent);
-    this.register('component:ui-car--default', UICarDefaultComponent);
-    this.register('component:ui-car--tesla', UICarTeslaComponent);
+    this.register('component:base--ui-car--default', UICarDefaultComponent);
+    this.register('component:base--ui-car--tesla', UICarTeslaComponent);
   }
 });
 
@@ -24,11 +24,11 @@ test('it is tagless', function(assert) {
 
 test('it renders the default kind component', function(assert) {
   this.render(hbs`{{ui-car}}`);
-  assert.equal(this.$('.ui-car--default').length, 1, 'default component rendered');
+  assert.equal(this.$('.base--ui-car--default').length, 1, 'default component rendered');
 });
 
 test('it renders the specified kind component', function(assert) {
   this.render(hbs`{{ui-car kind="tesla"}}`);
 
-  assert.equal(this.$('.ui-car--tesla').length, 1, 'given kind is rendered');
+  assert.equal(this.$('.base--ui-car--tesla').length, 1, 'given kind is rendered');
 });

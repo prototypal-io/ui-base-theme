@@ -13,8 +13,8 @@ moduleForComponent('ui-button--simple', 'Integration | Component | ui button (si
 test('it is the same as the default component except the layout is a copy', function(assert) {
   var container = getOwner(this);
 
-  var defaultComponent = container.lookup('component:ui-button--default');
-  var component = container.lookup('component:ui-button--simple');
+  var defaultComponent = container.lookup('component:base--ui-button--default');
+  var component = container.lookup('component:base--ui-button--simple');
 
   var defaultLayout = get(defaultComponent, 'layout');
   var layout = get(component, 'layout');
@@ -22,7 +22,7 @@ test('it is the same as the default component except the layout is a copy', func
   var defaultStatements = get(defaultLayout, 'raw.statements');
   var statements = get(layout, 'raw.statements');
 
-  assert.equal(get(layout, 'meta.moduleName'), 'modules/ui-base-theme/templates/components/ui-button--simple.hbs', 'correct layout import');
+  assert.equal(get(layout, 'meta.moduleName'), 'modules/ui-base-theme/templates/components/base--ui-button--simple.hbs', 'correct layout import');
   assert.notEqual(get(defaultLayout, 'meta.moduleName'), get(layout, 'meta.moduleName'), 'different layout import than default component');
   assert.equal(defaultStatements.length, statements.length, 'same top level statements length');
 

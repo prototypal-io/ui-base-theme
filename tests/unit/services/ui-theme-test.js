@@ -2,14 +2,6 @@ import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('service:ui-theme', 'Unit | Service | ui theme');
 
-test('lookup: finds frame component for given `base` & `kind`', function(assert) {
-  let service = this.subject();
-
-  let result = service.lookup('ui-foo', 'bar');
-
-  assert.equal(result, 'ui-foo--bar', 'frame component path returned');
-});
-
 test('lookup: finds frame component for given `base` & `kind` & `theme`', function(assert) {
   let service = this.subject();
 
