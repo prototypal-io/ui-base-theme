@@ -1,7 +1,10 @@
 import Ember from 'ember';
 import layout from '../templates/components/ui-component';
+import TaglessElementSelectorMixin from 'ui-base-theme/mixins/tagless-element-selector';
 
-const UIComponent = Ember.Component.extend({
+const UIComponent = Ember.Component.extend(
+  TaglessElementSelectorMixin, {
+
   uiTheme: Ember.inject.service(),
 
   layout,

@@ -3,8 +3,6 @@ import UIComponent from './ui-component';
 import layout from 'ui-base-theme/templates/components/ui-button';
 import state from '../state';
 
-const { $ } = Ember;
-
 export default UIComponent.extend({
   layout,
 
@@ -35,11 +33,6 @@ export default UIComponent.extend({
       isLastChild: this.get('buttonGroup.lastChild') === this
     };
   }),
-
-  $(sel) {
-    let el = this._renderNode.firstNode.nextElementSibling;
-    return sel ? $(sel, el) : $(el);
-  },
 
   didInsertElement() {
     this.$().on('webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd', () => {
